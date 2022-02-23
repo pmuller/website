@@ -1974,6 +1974,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@thbx/tsconfig@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "@thbx/tsconfig@npm:1.0.0"
+  checksum: 800745aedba5929da397243788a1fbddb83e0a609a251257af6b4f7a4d3a8ef1e73e82f5e78b47eb82fbb182141fdfb45e22c35f605e25166680fa1b62c712fd
+  languageName: node
+  linkType: hard
+
 "@tokenizer/token@npm:^0.3.0":
   version: 0.3.0
   resolution: "@tokenizer/token@npm:0.3.0"
@@ -12805,6 +12812,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "website@workspace:packages/website"
   dependencies:
+    "@thbx/tsconfig": ^1.0.0
     eslint: ^8.9.0
     gatsby: ^4.8.0
     prettier: ^2.5.1

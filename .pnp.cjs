@@ -3267,6 +3267,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["@thbx/tsconfig", [\
+        ["npm:1.0.0", {\
+          "packageLocation": "./.yarn/cache/@thbx-tsconfig-npm-1.0.0-549bc54c93-800745aedb.zip/node_modules/@thbx/tsconfig/",\
+          "packageDependencies": [\
+            ["@thbx/tsconfig", "npm:1.0.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["@tokenizer/token", [\
         ["npm:0.3.0", {\
           "packageLocation": "./.yarn/cache/@tokenizer-token-npm-0.3.0-4441352cc5-1d575d02d2.zip/node_modules/@tokenizer/token/",\
@@ -16449,6 +16458,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./packages/website/",\
           "packageDependencies": [\
             ["website", "workspace:packages/website"],\
+            ["@thbx/tsconfig", "npm:1.0.0"],\
             ["eslint", "npm:8.9.0"],\
             ["gatsby", "virtual:22100b7c8cc4d32b90e76193e5a2f63399e09970a2e680d0258c45866799e2224a6dab3ae08ef822cd8b8eaa5da221da9eb273a0636084b93cd7131477a1f284#npm:4.8.0"],\
             ["prettier", "npm:2.5.1"],\
