@@ -3,5 +3,6 @@
   "version": "1.0.0",
   "repository": "https://github.com/pmuller/pmuller-dot-fr",
   "author": "Philippe Muller <philippe.muller@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "packageManager": "yarn@3.2.0"
 }
