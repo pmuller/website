@@ -12815,6 +12815,7 @@ __metadata:
     "@thbx/tsconfig": ^1.0.0
     eslint: ^8.9.0
     gatsby: ^4.8.0
+    gatsby-plugin-typescript: ^4.8.0
     prettier: ^2.5.1
     react: ^17.0.2
     react-dom: ^17.0.2
