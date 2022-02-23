@@ -2541,7 +2541,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/react-dom", null],\
             ["invariant", "npm:2.2.4"],\
             ["prop-types", "npm:15.8.1"],\
-            ["react", null],\
+            ["react", "npm:17.0.2"],\
             ["react-dom", null],\
             ["react-lifecycles-compat", "npm:3.0.4"]\
           ],\
@@ -8508,7 +8508,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["prop-types", "npm:15.8.1"],\
             ["query-string", "npm:6.14.1"],\
             ["raw-loader", "virtual:f808f40717c366701883369909c3f46cc97e26d4c0f2b4461337465d4075359d91b7e73fa7befdb74954b5d16c144be954c9e1fb3e4dd202d05ae55a1296a5c1#npm:4.0.2"],\
-            ["react", null],\
+            ["react", "npm:17.0.2"],\
             ["react-dev-utils", "npm:11.0.4"],\
             ["react-dom", null],\
             ["react-refresh", "npm:0.9.0"],\
@@ -8669,7 +8669,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/react-dom", null],\
             ["gatsby-page-utils", "npm:2.8.0"],\
             ["prop-types", "npm:15.8.1"],\
-            ["react", null],\
+            ["react", "npm:17.0.2"],\
             ["react-dom", null]\
           ],\
           "packagePeers": [\
@@ -8804,7 +8804,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/react", null],\
             ["@types/react-dom", null],\
             ["prop-types", "npm:15.8.1"],\
-            ["react", null],\
+            ["react", "npm:17.0.2"],\
             ["react-dom", null]\
           ],\
           "packagePeers": [\
@@ -13831,6 +13831,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["react", [\
+        ["npm:17.0.2", {\
+          "packageLocation": "./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/",\
+          "packageDependencies": [\
+            ["react", "npm:17.0.2"],\
+            ["loose-envify", "npm:1.4.0"],\
+            ["object-assign", "npm:4.1.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["react-dev-utils", [\
         ["npm:11.0.4", {\
           "packageLocation": "./.yarn/cache/react-dev-utils-npm-11.0.4-3a3d727f29-b41c95010a.zip/node_modules/react-dev-utils/",\
@@ -16405,6 +16416,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint", "npm:8.9.0"],\
             ["gatsby", "virtual:22100b7c8cc4d32b90e76193e5a2f63399e09970a2e680d0258c45866799e2224a6dab3ae08ef822cd8b8eaa5da221da9eb273a0636084b93cd7131477a1f284#npm:4.8.0"],\
             ["prettier", "npm:2.5.1"],\
+            ["react", "npm:17.0.2"],\
             ["typescript", "patch:typescript@npm%3A4.5.5#~builtin<compat/typescript>::version=4.5.5&hash=bda367"]\
           ],\
           "linkType": "SOFT"\
