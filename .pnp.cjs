@@ -2542,7 +2542,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["invariant", "npm:2.2.4"],\
             ["prop-types", "npm:15.8.1"],\
             ["react", "npm:17.0.2"],\
-            ["react-dom", null],\
+            ["react-dom", "virtual:22100b7c8cc4d32b90e76193e5a2f63399e09970a2e680d0258c45866799e2224a6dab3ae08ef822cd8b8eaa5da221da9eb273a0636084b93cd7131477a1f284#npm:17.0.2"],\
             ["react-lifecycles-compat", "npm:3.0.4"]\
           ],\
           "packagePeers": [\
@@ -8510,7 +8510,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["raw-loader", "virtual:f808f40717c366701883369909c3f46cc97e26d4c0f2b4461337465d4075359d91b7e73fa7befdb74954b5d16c144be954c9e1fb3e4dd202d05ae55a1296a5c1#npm:4.0.2"],\
             ["react", "npm:17.0.2"],\
             ["react-dev-utils", "npm:11.0.4"],\
-            ["react-dom", null],\
+            ["react-dom", "virtual:22100b7c8cc4d32b90e76193e5a2f63399e09970a2e680d0258c45866799e2224a6dab3ae08ef822cd8b8eaa5da221da9eb273a0636084b93cd7131477a1f284#npm:17.0.2"],\
             ["react-refresh", "npm:0.9.0"],\
             ["redux", "npm:4.1.2"],\
             ["redux-thunk", "virtual:f808f40717c366701883369909c3f46cc97e26d4c0f2b4461337465d4075359d91b7e73fa7befdb74954b5d16c144be954c9e1fb3e4dd202d05ae55a1296a5c1#npm:2.4.1"],\
@@ -8670,7 +8670,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["gatsby-page-utils", "npm:2.8.0"],\
             ["prop-types", "npm:15.8.1"],\
             ["react", "npm:17.0.2"],\
-            ["react-dom", null]\
+            ["react-dom", "virtual:22100b7c8cc4d32b90e76193e5a2f63399e09970a2e680d0258c45866799e2224a6dab3ae08ef822cd8b8eaa5da221da9eb273a0636084b93cd7131477a1f284#npm:17.0.2"]\
           ],\
           "packagePeers": [\
             "@gatsbyjs/reach-router",\
@@ -8805,7 +8805,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/react-dom", null],\
             ["prop-types", "npm:15.8.1"],\
             ["react", "npm:17.0.2"],\
-            ["react-dom", null]\
+            ["react-dom", "virtual:22100b7c8cc4d32b90e76193e5a2f63399e09970a2e680d0258c45866799e2224a6dab3ae08ef822cd8b8eaa5da221da9eb273a0636084b93cd7131477a1f284#npm:17.0.2"]\
           ],\
           "packagePeers": [\
             "@gatsbyjs/reach-router",\
@@ -13875,6 +13875,31 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["react-dom", [\
+        ["npm:17.0.2", {\
+          "packageLocation": "./.yarn/cache/react-dom-npm-17.0.2-f551215af1-1c1eaa3bca.zip/node_modules/react-dom/",\
+          "packageDependencies": [\
+            ["react-dom", "npm:17.0.2"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:22100b7c8cc4d32b90e76193e5a2f63399e09970a2e680d0258c45866799e2224a6dab3ae08ef822cd8b8eaa5da221da9eb273a0636084b93cd7131477a1f284#npm:17.0.2", {\
+          "packageLocation": "./.yarn/__virtual__/react-dom-virtual-247f9319fd/0/cache/react-dom-npm-17.0.2-f551215af1-1c1eaa3bca.zip/node_modules/react-dom/",\
+          "packageDependencies": [\
+            ["react-dom", "virtual:22100b7c8cc4d32b90e76193e5a2f63399e09970a2e680d0258c45866799e2224a6dab3ae08ef822cd8b8eaa5da221da9eb273a0636084b93cd7131477a1f284#npm:17.0.2"],\
+            ["@types/react", null],\
+            ["loose-envify", "npm:1.4.0"],\
+            ["object-assign", "npm:4.1.1"],\
+            ["react", "npm:17.0.2"],\
+            ["scheduler", "npm:0.20.2"]\
+          ],\
+          "packagePeers": [\
+            "@types/react",\
+            "react"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["react-error-overlay", [\
         ["npm:6.0.10", {\
           "packageLocation": "./.yarn/cache/react-error-overlay-npm-6.0.10-3a2fed5ec4-e7384f086a.zip/node_modules/react-error-overlay/",\
@@ -14428,6 +14453,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/safer-buffer-npm-2.1.2-8d5c0b705e-cab8f25ae6.zip/node_modules/safer-buffer/",\
           "packageDependencies": [\
             ["safer-buffer", "npm:2.1.2"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["scheduler", [\
+        ["npm:0.20.2", {\
+          "packageLocation": "./.yarn/cache/scheduler-npm-0.20.2-90beaecfba-c4b35cf967.zip/node_modules/scheduler/",\
+          "packageDependencies": [\
+            ["scheduler", "npm:0.20.2"],\
+            ["loose-envify", "npm:1.4.0"],\
+            ["object-assign", "npm:4.1.1"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -16417,6 +16453,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["gatsby", "virtual:22100b7c8cc4d32b90e76193e5a2f63399e09970a2e680d0258c45866799e2224a6dab3ae08ef822cd8b8eaa5da221da9eb273a0636084b93cd7131477a1f284#npm:4.8.0"],\
             ["prettier", "npm:2.5.1"],\
             ["react", "npm:17.0.2"],\
+            ["react-dom", "virtual:22100b7c8cc4d32b90e76193e5a2f63399e09970a2e680d0258c45866799e2224a6dab3ae08ef822cd8b8eaa5da221da9eb273a0636084b93cd7131477a1f284#npm:17.0.2"],\
             ["typescript", "patch:typescript@npm%3A4.5.5#~builtin<compat/typescript>::version=4.5.5&hash=bda367"]\
           ],\
           "linkType": "SOFT"\
