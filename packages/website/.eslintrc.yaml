@@ -1,0 +1,6 @@
+extends:
+  - "eslint-config-typescript"
+
+rules:
+  # Is there a way to avoid using default exports in Gatsby?
+  import/no-default-export: off
