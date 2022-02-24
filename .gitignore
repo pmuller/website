@@ -1,2 +1,3 @@
 dist/
 tsconfig.tsbuildinfo
+/.yarn/yarn.build.json
