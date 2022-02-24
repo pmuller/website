@@ -1,6 +1,6 @@
-import { PageProps } from "gatsby"
-import React from "react"
+import { PageProps } from "gatsby";
+import React from "react";
 
-const IndexPage: React.FC<PageProps> = () => <div>Hello</div>
+const IndexPage: React.FC<PageProps> = () => <div>Hello</div>;
 
-export default IndexPage
+export default IndexPage;
