@@ -1,7 +1,7 @@
 {
   "name": "pmuller-dot-fr",
   "version": "1.0.0",
-  "repository": "https://github.com/pmuller/pmuller-dot-fr",
+  "repository": "https://github.com/pmuller/website",
   "author": "Philippe Muller",
   "license": "MIT",
   "packageManager": "yarn@3.2.0",
