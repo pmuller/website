@@ -48,6 +48,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         [null, {\
           "packageLocation": "./",\
           "packageDependencies": [\
+            ["eslint", "npm:8.9.0"],\
+            ["prettier", "npm:2.5.1"],\
+            ["typescript", "patch:typescript@npm%3A4.5.5#~builtin<compat/typescript>::version=4.5.5&hash=bda367"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -13302,7 +13305,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["workspace:.", {\
           "packageLocation": "./",\
           "packageDependencies": [\
-            ["pmuller-dot-fr", "workspace:."]\
+            ["pmuller-dot-fr", "workspace:."],\
+            ["eslint", "npm:8.9.0"],\
+            ["prettier", "npm:2.5.1"],\
+            ["typescript", "patch:typescript@npm%3A4.5.5#~builtin<compat/typescript>::version=4.5.5&hash=bda367"]\
           ],\
           "linkType": "SOFT"\
         }]\
