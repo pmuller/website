@@ -10074,9 +10074,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"pmuller-dot-fr@workspace:.":
+"pmuller-website@workspace:.":
   version: 0.0.0-use.local
-  resolution: "pmuller-dot-fr@workspace:."
+  resolution: "pmuller-website@workspace:."
   dependencies:
     eslint: ^8.9.0
     prettier: ^2.5.1
