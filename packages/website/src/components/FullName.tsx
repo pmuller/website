@@ -1,7 +1,7 @@
 import React from "react";
 
-import { fullName } from "./FullName.module.css";
+import { container } from "./FullName.module.css";
 
 export const FullName: React.FC = () => (
-  <h1 className={fullName}>Philippe Muller</h1>
+  <h1 className={container}>Philippe Muller</h1>
 );
