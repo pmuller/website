@@ -1,25 +1,13 @@
 import { PageProps } from "gatsby";
 import React from "react";
 
-import { FullName } from "../components";
+import { FullName, Introduction } from "../components";
 import { socialNetworkIcon } from "./index.module.css";
 
 const IndexPage: React.FC<PageProps> = () => (
   <main>
     <FullName />
-    <section>
-      <div>Hi, I'm Philippe.</div>
-      <div>
-        I am a software engineer and I am fond of infrastructure automation.
-      </div>
-      <div>
-        I am currently building awesome team building games at{" "}
-        <a target="_blank" rel="noopener" href="https://happyteams.events/en">
-          Happy Teams
-        </a>
-        .
-      </div>
-    </section>
+    <Introduction />
     <section>
       <a
         target="_blank"
