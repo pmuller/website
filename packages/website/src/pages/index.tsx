@@ -1,11 +1,12 @@
 import { PageProps } from "gatsby";
 import React from "react";
 
+import { FullName } from "../components";
 import { socialNetworkIcon } from "./index.module.css";
 
 const IndexPage: React.FC<PageProps> = () => (
   <main>
-    <h1>Philippe Muller</h1>
+    <FullName />
     <section>
       <div>Hi, I'm Philippe.</div>
       <div>
