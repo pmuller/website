@@ -1,5 +1,11 @@
+import { StaticImage } from "gatsby-plugin-image";
 import React from "react";
 
 export const Avatar: React.FC = () => (
-  <img style={{ width: "48px", height: "48px" }} src="/images/pmuller.png" />
+  <StaticImage
+    src="./Avatar.png"
+    alt="pmuller's avatar"
+    width={48}
+    height={48}
+  />
 );

@@ -5,5 +5,10 @@ module.exports = {
     author: "Philippe Muller",
     siteUrl: "https://pmuller.fr",
   },
-  plugins: ["gatsby-plugin-svgr-svgo"],
+  plugins: [
+    "gatsby-plugin-image",
+    "gatsby-plugin-sharp",
+    "gatsby-plugin-svgr-svgo",
+    "gatsby-transformer-sharp",
+  ],
 };
