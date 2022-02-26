@@ -1,5 +1,5 @@
 .container {
   font-family: cursive;
   font-variant: small-caps;
-  grid-area: FullName;
+  flex-grow: 1;
 }
