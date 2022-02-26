@@ -4,7 +4,7 @@ import { container } from "./Introduction.module.css";
 
 export const Introduction: React.FC = () => (
   <section className={container}>
-    <div>Hi, I'm Philippe.</div>
+    <div>Hi, I'm Philippe Muller.</div>
     <div>
       I am a software engineer and I am fond of infrastructure automation.
     </div>

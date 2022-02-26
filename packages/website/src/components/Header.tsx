@@ -1,12 +1,12 @@
 import React from "react";
 
-import { FullName } from "./FullName";
 import { container } from "./Header.module.css";
 import { SocialNetworkSection } from "./SocialNetworkSection";
+import { Title } from "./Title";
 
 export const Header: React.FC = () => (
   <header className={container}>
-    <FullName />
+    <Title />
     <SocialNetworkSection />
   </header>
 );
