@@ -1,14 +1,19 @@
 import { PageProps } from "gatsby";
 import React from "react";
 
-import { FullName, Introduction, SocialNetworkSection } from "../components";
+import {
+  FullName,
+  Introduction,
+  Layout,
+  SocialNetworkSection,
+} from "../components";
 
 const IndexPage: React.FC<PageProps> = () => (
-  <main>
+  <Layout>
     <FullName />
     <Introduction />
     <SocialNetworkSection />
-  </main>
+  </Layout>
 );
 
 export default IndexPage;

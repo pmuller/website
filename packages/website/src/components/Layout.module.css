@@ -1,0 +1,7 @@
+.container {
+  display: grid;
+  grid-template-areas:
+    "FullName FullName     . SocialNetworkSection"
+    ".        .            . ."
+    ".        Introduction . .";
+}
