@@ -7,5 +7,6 @@ export const Avatar: React.FC = () => (
     alt="pmuller's avatar"
     width={48}
     height={48}
+    style={{ minWidth: "48px" }}
   />
 );
