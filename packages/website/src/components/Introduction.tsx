@@ -1,5 +1,6 @@
 import React from "react";
 
+import { DelayedEmailAddress } from "./DelayedEmailAddress";
 import { container } from "./Introduction.module.css";
 
 export const Introduction: React.FC = () => (
@@ -32,8 +33,7 @@ export const Introduction: React.FC = () => (
       as an individual contributor and as CTO.
     </p>
     <p>
-      If you'd like to contact me, you can reach me at{" "}
-      <a href="mailto:philippe.muller@gmail.com">philippe.muller@gmail.com</a>.
+      If you'd like to contact me, you can reach me at <DelayedEmailAddress />.
     </p>
   </section>
 );
