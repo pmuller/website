@@ -16,6 +16,15 @@ export const Introduction: React.FC = () => (
       <a target="_blank" rel="noopener" href="https://happyteams.events/en">
         Happy Teams
       </a>
+      . If you are part of a remote team and enjoy escape rooms, you should
+      check out our latest game:{" "}
+      <a
+        target="_blank"
+        rel="noopener"
+        href="https://www.happyteams.events/en/the-diamond-heist"
+      >
+        The Diamond Heist
+      </a>
       .
     </p>
   </section>
