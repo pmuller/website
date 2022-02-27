@@ -8,3 +8,7 @@
 .container strong {
   color: #000;
 }
+
+.container > p {
+  line-height: 1.75rem;
+}
