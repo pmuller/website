@@ -2,4 +2,9 @@
   font-family: monospace;
   font-size: x-large;
   margin: 1rem;
+  color: #222;
+}
+
+.container strong {
+  color: #000;
 }
