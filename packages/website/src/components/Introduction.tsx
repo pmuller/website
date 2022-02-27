@@ -27,5 +27,9 @@ export const Introduction: React.FC = () => (
       </a>
       .
     </p>
+    <p>
+      Previously, I worked in tech companies and in systematic hedge funds, both
+      as an individual contributor and as CTO.
+    </p>
   </section>
 );
