@@ -31,5 +31,9 @@ export const Introduction: React.FC = () => (
       Previously, I worked in tech companies and in systematic hedge funds, both
       as an individual contributor and as CTO.
     </p>
+    <p>
+      If you'd like to contact me, you can reach me at{" "}
+      <a href="mailto:philippe.muller@gmail.com">philippe.muller@gmail.com</a>.
+    </p>
   </section>
 );
