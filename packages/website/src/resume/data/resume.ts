@@ -8,6 +8,7 @@ export const resume: Resume = {
   firstName: "Philippe",
   lastName: "Muller",
   location: "Metz, France",
+  email: "philippe.muller@gmail.com",
   website: "https://pmuller.eu",
   github: "pmuller",
   linkedin: "muller",
