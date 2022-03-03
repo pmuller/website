@@ -7,28 +7,6 @@ export const resume: Resume = {
   education,
   firstName: "Philippe",
   lastName: "Muller",
-  contact: [
-    {
-      label: "philippe.muller@gmail.com",
-      url: "mailto:philippe.muller@gmail.com",
-      icon: "email",
-    },
-    {
-      label: "pmuller.eu",
-      url: "https://pmuller.eu",
-      icon: "web",
-    },
-    {
-      label: "pmuller",
-      url: "https://github.com/pmuller",
-      icon: "github",
-    },
-    {
-      label: "muller",
-      url: "https://linkedin.com/in/muller",
-      icon: "linkedin",
-    },
-  ],
   jobTitle: "Software Engineer",
   summary: `\
 Software engineer with 20+ years of experience.
