@@ -6,7 +6,6 @@ export type Resume = {
   firstName: string;
   lastName: string;
   contact: ContactMethod[];
-  location: string;
   jobTitle: string;
   summary: string;
   experiences: Experience[];

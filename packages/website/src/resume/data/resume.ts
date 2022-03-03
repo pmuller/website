@@ -7,7 +7,6 @@ export const resume: Resume = {
   education,
   firstName: "Philippe",
   lastName: "Muller",
-  location: "Metz, France",
   contact: [
     {
       label: "philippe.muller@gmail.com",
