@@ -8,10 +8,28 @@ export const resume: Resume = {
   firstName: "Philippe",
   lastName: "Muller",
   location: "Metz, France",
-  email: "philippe.muller@gmail.com",
-  website: "https://pmuller.eu",
-  github: "pmuller",
-  linkedin: "muller",
+  contact: [
+    {
+      label: "philippe.muller@gmail.com",
+      url: "mailto:philippe.muller@gmail.com",
+      icon: "email",
+    },
+    {
+      label: "pmuller.eu",
+      url: "https://pmuller.eu",
+      icon: "web",
+    },
+    {
+      label: "pmuller",
+      url: "https://github.com/pmuller",
+      icon: "github",
+    },
+    {
+      label: "muller",
+      url: "https://linkedin.com/in/muller",
+      icon: "linkedin",
+    },
+  ],
   jobTitle: "Software Engineer",
   summary: `\
 Software engineer with 20+ years of experience.
