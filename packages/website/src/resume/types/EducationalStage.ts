@@ -1,7 +1,7 @@
-import { School } from "./School";
+import { Organization } from "./Organization";
 
 export type EducationalStage = {
-  school: School;
+  school: Organization;
   degree?: string;
   description?: string;
   startDate: Date;

@@ -1,11 +1,11 @@
-import { Company } from "./Company";
+import { Organization } from "./Organization";
 
 export type Experience = {
   title: string;
   startDate: Date;
   endDate?: Date;
   location: string;
-  company: Company;
+  company: Organization;
   description: string;
   techStack?: string[];
 };

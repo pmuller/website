@@ -1,4 +1,4 @@
-export type School = {
+export type Organization = {
   name: string;
   url?: string;
   location?: string;
