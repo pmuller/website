@@ -1,6 +1,6 @@
 import { Organization } from "./Organization";
 
-export type EducationalStage = {
+export type EducationStage = {
   school: Organization;
   degree?: string;
   description?: string;

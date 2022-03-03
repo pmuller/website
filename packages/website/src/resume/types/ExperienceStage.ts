@@ -1,6 +1,6 @@
 import { Organization } from "./Organization";
 
-export type Experience = {
+export type ExperienceStage = {
   title: string;
   startDate: Date;
   endDate?: Date;

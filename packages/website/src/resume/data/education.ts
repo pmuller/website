@@ -1,6 +1,6 @@
-import { EducationalStage } from "../types";
+import { EducationStage } from "../types";
 
-export const education: EducationalStage[] = [
+export const education: EducationStage[] = [
   {
     school: { name: "The Internet" },
     startDate: new Date("1997-07-07"),

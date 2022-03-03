@@ -1,7 +1,7 @@
 /* eslint-disable sonarjs/no-duplicate-string */
-import { Experience } from "../types";
+import { ExperienceStage } from "../types";
 
-export const experiences: Experience[] = [
+export const experience: ExperienceStage[] = [
   {
     startDate: new Date("2021-01-04"),
     location: "Metz, France",
