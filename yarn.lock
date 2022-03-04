@@ -2316,6 +2316,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@mdi/js@npm:^6.5.95":
+  version: 6.5.95
+  resolution: "@mdi/js@npm:6.5.95"
+  checksum: b1db7713d216c119f584bf973514a2f9d8f2e671e91bf19ce8e56cfa7a9843c0a060328e794507ac31f2bded1032123294f39ff8e987ea5acb2719ab522ef146
+  languageName: node
+  linkType: hard
+
+"@mdi/react@npm:^1.5.0":
+  version: 1.5.0
+  resolution: "@mdi/react@npm:1.5.0"
+  checksum: bf79b881cd87611179b02e004f1a4155f9bee0ccbc465b18da13a6387bc08a3fa42f8686c9d9678a27ad74016ab0c3a6779ba4d86416f9fb0048e980f2d0a6e2
+  languageName: node
+  linkType: hard
+
 "@microsoft/fetch-event-source@npm:2.0.1":
   version: 2.0.1
   resolution: "@microsoft/fetch-event-source@npm:2.0.1"
@@ -14373,6 +14387,8 @@ __metadata:
   resolution: "website@workspace:packages/website"
   dependencies:
     "@babel/core": ^7.17.5
+    "@mdi/js": ^6.5.95
+    "@mdi/react": ^1.5.0
     "@svgr/webpack": ^6.2.1
     "@trivago/prettier-plugin-sort-imports": ^3.2.0
     "@types/react": ^17.0.39
