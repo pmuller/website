@@ -1,9 +1,10 @@
 import React from "react";
 
 import { identity } from "../data";
+import { container } from "./Identity.module.css";
 
 export const Identity: React.FC = () => (
-  <div>
+  <div className={container}>
     <h1>
       {identity.firstName} {identity.lastName}
     </h1>

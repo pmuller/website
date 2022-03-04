@@ -1,15 +1,13 @@
 import React from "react";
 
-import { Contact } from "./Contact";
 import { Education } from "./Education";
 import { Experience } from "./Experience";
-import { Identity } from "./Identity";
+import { Header } from "./Header";
 import { Summary } from "./Summary";
 
 export const Resume: React.FC = () => (
   <div>
-    <Identity />
-    <Contact />
+    <Header />
     <Summary />
     <Experience />
     <Education />
