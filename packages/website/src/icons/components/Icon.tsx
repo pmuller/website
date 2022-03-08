@@ -1,6 +1,6 @@
 import React from "react";
 
-import { container } from "./Icon.module.css";
+import { IconImage } from "./IconImage";
 
 type Props = {
   name: string;
@@ -10,6 +10,6 @@ type Props = {
 
 export const Icon: React.FC<Props> = ({ name, path, url }) => (
   <a target="_blank" rel="noopener" href={url}>
-    <img className={container} src={path} alt={name} />
+    <IconImage src={path} alt={name} />
   </a>
 );

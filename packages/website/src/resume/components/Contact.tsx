@@ -1,13 +1,13 @@
 import React from "react";
 
 import { contactMethods } from "../data";
-import { container } from "./Contact.module.css";
+import { ContactContainer } from "./ContactContainer";
 import { ContactMethod } from "./ContactMethod";
 
 export const Contact: React.FC = () => (
-  <div className={container}>
+  <ContactContainer>
     {contactMethods.map((method, index) => (
       <ContactMethod {...method} key={index} />
     ))}
-  </div>
+  </ContactContainer>
 );

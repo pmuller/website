@@ -4,3 +4,7 @@ extends:
 rules:
   # Is there a way to avoid using default exports in Gatsby?
   import/no-default-export: off
+  import/no-internal-modules:
+    - error
+    - allow:
+        - linaria/react

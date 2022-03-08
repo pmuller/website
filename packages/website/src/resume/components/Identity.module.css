@@ -1,7 +1,0 @@
-.container {
-  flex-grow: 1;
-  font-family: sans-serif;
-}
-.container > h2 {
-  color: #666;
-}

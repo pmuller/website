@@ -2,11 +2,11 @@ import Icon from "@mdi/react";
 import React from "react";
 
 import { ContactMethod as Props } from "../types";
-import { container } from "./ContactMethod.module.css";
+import { ContactMethodAnchor } from "./ContactMethodAnchor";
 
 export const ContactMethod: React.FC<Props> = ({ label, url, icon }) => (
-  <a href={url} rel="noopener" target="_blank" className={container}>
+  <ContactMethodAnchor href={url} rel="noopener" target="_blank">
     {label}
     <Icon path={icon} size={1} />
-  </a>
+  </ContactMethodAnchor>
 );

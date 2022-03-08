@@ -1,12 +1,12 @@
 import React from "react";
 
 import { GitHubIcon, LinkedInIcon, TwitterIcon } from "../../icons";
-import { container } from "./SocialNetworkSection.module.css";
+import { SocialNetworkIconContainer } from "./SocialNetworkIconContainer";
 
 export const SocialNetworkSection: React.FC = () => (
-  <section className={container}>
+  <SocialNetworkIconContainer>
     <GitHubIcon />
     <LinkedInIcon />
     <TwitterIcon />
-  </section>
+  </SocialNetworkIconContainer>
 );

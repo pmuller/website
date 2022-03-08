@@ -1,11 +1,10 @@
 import React from "react";
 
 import { Contact } from "./Contact";
-import { container } from "./Header.module.css";
 import { Identity } from "./Identity";
 
 export const Header: React.FC = () => (
-  <header className={container}>
+  <header style={{ display: "flex" }}>
     <Identity />
     <Contact />
   </header>

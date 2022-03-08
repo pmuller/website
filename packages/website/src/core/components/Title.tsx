@@ -1,5 +1,5 @@
 import React from "react";
 
-import { container } from "./Title.module.css";
+import { TitleContainer } from "./TitleContainer";
 
-export const Title: React.FC = () => <h1 className={container}>pmuller</h1>;
+export const Title: React.FC = () => <TitleContainer>pmuller</TitleContainer>;

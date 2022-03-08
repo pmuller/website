@@ -6,6 +6,8 @@ module.exports = {
     siteUrl: "https://pmuller.fr",
   },
   plugins: [
+    "gatsby-plugin-typescript",
+    "gatsby-plugin-linaria",
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
     "gatsby-plugin-svgr-svgo",

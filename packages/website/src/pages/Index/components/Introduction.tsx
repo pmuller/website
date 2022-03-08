@@ -1,10 +1,10 @@
 import React from "react";
 
 import { DelayedEmailAddress } from "./DelayedEmailAddress";
-import { container } from "./Introduction.module.css";
+import { IntroductionContainer } from "./IntroductionContainer";
 
 export const Introduction: React.FC = () => (
-  <section className={container}>
+  <IntroductionContainer>
     <p>
       Hi, my name is <strong>Philippe Muller</strong>.
     </p>
@@ -35,5 +35,5 @@ export const Introduction: React.FC = () => (
     <p>
       If you'd like to contact me, you can reach me at <DelayedEmailAddress />.
     </p>
-  </section>
+  </IntroductionContainer>
 );

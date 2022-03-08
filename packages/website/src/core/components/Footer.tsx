@@ -1,12 +1,12 @@
 import React from "react";
 
-import { container } from "./Footer.module.css";
+import { FooterContainer } from "./FooterContainer";
 
 export const Footer: React.FC = () => (
-  <footer className={container}>
+  <FooterContainer>
     © {new Date().getFullYear()} Philippe Muller - Clone on{" "}
     <a rel="noopener" target="_blank" href="https://github.com/pmuller/website">
       GitHub
     </a>
-  </footer>
+  </FooterContainer>
 );

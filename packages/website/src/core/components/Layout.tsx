@@ -2,12 +2,12 @@ import React from "react";
 
 import { Footer } from "./Footer";
 import { Header } from "./Header";
-import { container } from "./Layout.module.css";
+import { LayoutContainer } from "./LayoutContainer";
 
 export const Layout: React.FC = ({ children }) => (
-  <main className={container}>
+  <LayoutContainer>
     <Header />
     {children}
     <Footer />
-  </main>
+  </LayoutContainer>
 );
