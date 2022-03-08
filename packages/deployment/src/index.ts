@@ -1,3 +1,4 @@
 import { repository } from "./git";
+import { contentBucket, logsBucket } from "./s3";
 
-export { repository };
+export { contentBucket, logsBucket, repository };
