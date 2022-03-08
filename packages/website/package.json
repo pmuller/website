@@ -6,7 +6,8 @@
     "build": "gatsby build",
     "check:eslint": "eslint --max-warnings 0 ./src",
     "check:prettier": "prettier --check .",
-    "check": "yarn check:prettier && yarn check:eslint",
+    "check:stylelint": "stylelint src/**/*.tsx",
+    "check": "yarn check:prettier && yarn check:stylelint && yarn check:eslint",
     "clean": "rm -rf ./public",
     "server": "gatsby develop"
   },
@@ -38,6 +39,8 @@
     "eslint-plugin-sonarjs": "^0.12.0",
     "prettier": "^2.5.1",
     "prettier-config": "workspace:^",
+    "stylelint": "^13.13.1",
+    "stylelint-config-recommended": "^5.0.0",
     "typescript": "^4.5.5"
   },
   "prettier": "prettier-config"
