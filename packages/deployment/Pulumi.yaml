@@ -1,0 +1,4 @@
+name: website
+runtime: nodejs
+description: pmuller.eu deployment
+main: src/

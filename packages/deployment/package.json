@@ -1,0 +1,10 @@
+{
+  "name": "website-deployment",
+  "devDependencies": {
+    "@types/node": "^16"
+  },
+  "dependencies": {
+    "@pulumi/github": "^4.10.0",
+    "@pulumi/pulumi": "^3.25.1"
+  }
+}
