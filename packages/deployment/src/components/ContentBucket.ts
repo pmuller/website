@@ -19,7 +19,12 @@ export class ContentBucket extends ComponentResource {
   constructor(name: string, args: Inputs, opts?: ComponentResourceOptions) {
     super("website:ContentBucket", name, {}, opts);
     const bucket = this.deployBucket(name, args.logsBucketId);
-    this.deployBucketPolicy(name, bucket.id, args.originAccessIdentityArn);
+    this.deployBucketPolicy(
+      name,
+      bucket.id,
+      bucket.arn,
+      args.originAccessIdentityArn
+    );
     this.id = bucket.id;
     this.regionalDomainName = bucket.bucketRegionalDomainName;
     this.registerOutputs();
@@ -43,8 +48,18 @@ export class ContentBucket extends ComponentResource {
   private deployBucketPolicy(
     name: string,
     bucketId: Input<string>,
+    bucketArn: Input<string>,
     originAccessIdentityArn: Input<string>
   ): s3.BucketPolicy {
+    const baseStatement = {
+      effect: "Allow",
+      principals: [
+        {
+          type: "AWS",
+          identifiers: [originAccessIdentityArn],
+        },
+      ],
+    };
     return new s3.BucketPolicy(
       `${name}-content`,
       {
@@ -52,15 +67,14 @@ export class ContentBucket extends ComponentResource {
         policy: iam.getPolicyDocumentOutput({
           statements: [
             {
-              effect: "Allow",
+              ...baseStatement,
               actions: ["s3:GetObject"],
-              principals: [
-                {
-                  type: "AWS",
-                  identifiers: [originAccessIdentityArn],
-                },
-              ],
-              resources: [interpolate`arn:aws:s3:::${bucketId}/*`],
+              resources: [interpolate`${bucketArn}/*`],
+            },
+            {
+              ...baseStatement,
+              actions: ["s3:ListBucket"],
+              resources: [bucketArn],
             },
           ],
         }).json,
