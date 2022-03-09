@@ -1,0 +1,14 @@
+name: deployment
+
+on:
+  push:
+    paths:
+      - .github/workflows/deployment.yaml
+      - packages/deployment/**
+      - yarn.lock
+
+jobs:
+  build:
+    uses: pmuller/website/.github/workflows/build.yaml@develop
+    with:
+      workDir: ./packages/deployment
