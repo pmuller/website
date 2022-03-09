@@ -9,12 +9,11 @@ on:
       - packages/website/**
       - yarn.lock
 
-defaults:
-  run:
-    working-directory: ./packages/website
-
 jobs:
   build:
+    defaults:
+      run:
+        working-directory: ./packages/website
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -38,7 +37,8 @@ jobs:
       - uses: actions/download-artifact@v3
         with:
           name: website-${{ github.ref_name }}
+          path: build
       - run: |
           pwd
           ls -lh
-          ls -lh public
+          ls -lh build
