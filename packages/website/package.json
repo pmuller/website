@@ -9,7 +9,8 @@
     "check:stylelint": "stylelint src/**/*.tsx",
     "check": "yarn check:prettier && yarn check:stylelint && yarn check:eslint",
     "clean": "rm -rf ./public",
-    "server": "gatsby develop"
+    "server": "gatsby develop",
+    "test": "echo No tests"
   },
   "dependencies": {
     "@babel/core": "^7.17.5",
