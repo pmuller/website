@@ -28,7 +28,7 @@ jobs:
       - uses: actions/upload-artifact@v3
         with:
           name: website-${{ github.ref }}
-          path: public/
+          path: packages/website/public/
           if-no-files-found: error
 
   deploy:
