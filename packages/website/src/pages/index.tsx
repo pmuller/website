@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Layout } from "../core";
-import { Introduction } from "./Index";
+import { Introduction } from "../home";
 
 const Index: React.FC = () => (
   <Layout>
