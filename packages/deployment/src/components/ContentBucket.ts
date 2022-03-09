@@ -14,12 +14,14 @@ type Inputs = {
 
 export class ContentBucket extends ComponentResource {
   public id: Output<string>;
+  public regionalDomainName: Output<string>;
 
   constructor(name: string, args: Inputs, opts?: ComponentResourceOptions) {
     super("website:ContentBucket", name, {}, opts);
     const bucket = this.deployBucket(name, args.logsBucketId);
     this.deployBucketPolicy(name, bucket.id, args.originAccessIdentityArn);
     this.id = bucket.id;
+    this.regionalDomainName = bucket.bucketRegionalDomainName;
     this.registerOutputs();
   }
 
