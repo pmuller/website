@@ -10,7 +10,8 @@
     "check:eslint": "eslint --max-warnings 0 '**/*.ts'",
     "check:prettier": "prettier --check .",
     "check": "yarn check:prettier && yarn check:eslint",
-    "clean": "tsc --build --clean"
+    "clean": "tsc --build --clean",
+    "test": "echo No tests"
   },
   "devDependencies": {
     "@types/eslint": "^8.4.1",
