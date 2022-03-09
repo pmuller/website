@@ -42,6 +42,12 @@ export class DeploymentApiKey extends ComponentResource {
           actions: ["s3:PutObject", "s3:GetObject", "s3:DeleteObject"],
           resources: [interpolate`${contentBucketArn}/*`],
         },
+        {
+          effect: "Allow",
+          actions: ["cloudfront:CreateInvalidation"],
+          // AWS doesn't allow matching a specific distribution
+          resources: ["*"],
+        },
       ],
     }).json;
     new iam.UserPolicy(name, { user, policy }, { parent: this });
