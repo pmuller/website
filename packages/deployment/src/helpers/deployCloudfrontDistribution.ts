@@ -44,7 +44,7 @@ export const deployCloudfrontDistribution = (
     loggingConfig: {
       bucket: logsBucketDomainName,
       includeCookies: false,
-      prefix: `cloudfront/`,
+      prefix: "cloudfront/",
     },
     restrictions: {
       geoRestriction: {
