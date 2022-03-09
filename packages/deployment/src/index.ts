@@ -4,16 +4,20 @@ import { deployCloudfrontDistribution } from "./helpers";
 import { cloudfront, s3 } from "@pulumi/aws";
 
 const originAccessIdentity = new cloudfront.OriginAccessIdentity("website");
-export const logsBucket = new s3.Bucket("logs");
-export const contentBucket = new ContentBucket("website", {
+const logsBucket = new s3.Bucket("logs");
+const contentBucket = new ContentBucket("website", {
   logsBucketId: logsBucket.id,
   originAccessIdentityArn: originAccessIdentity.iamArn,
 });
-export const cloudfrontDistribution = deployCloudfrontDistribution(
+const cloudfrontDistribution = deployCloudfrontDistribution(
   contentBucket.id,
   contentBucket.regionalDomainName,
   originAccessIdentity.cloudfrontAccessIdentityPath,
   logsBucket.bucketDomainName
 );
 
-export { repository };
+export const cloudfrontDistributionDomainName =
+  cloudfrontDistribution.domainName;
+export const contentBucketId = contentBucket.id;
+export const logsBucketId = logsBucket.id;
+export const repositoryHtmlUrl = repository.htmlUrl;
