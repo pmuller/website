@@ -12,3 +12,11 @@ jobs:
     uses: pmuller/website/.github/workflows/build.yaml@develop
     with:
       workDir: ./packages/website
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          pwd
+          ls -lh
+          ls -lh public
