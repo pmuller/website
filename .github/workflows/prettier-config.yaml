@@ -1,0 +1,14 @@
+name: prettier-config
+
+on:
+  push:
+    paths:
+      - .github/workflows/prettier-config.yaml
+      - packages/prettier-config/**
+      - yarn.lock
+
+jobs:
+  build:
+    uses: pmuller/website/.github/workflows/build.yaml@develop
+    with:
+      workDir: ./packages/prettier-config
