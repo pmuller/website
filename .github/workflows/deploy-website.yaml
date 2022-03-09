@@ -37,7 +37,6 @@ jobs:
       - uses: actions/download-artifact@v3
         with:
           name: website-${{ github.ref_name }}
-          path: build
       - uses: aws-actions/configure-aws-credentials@v1
         with:
           aws-access-key-id: ${{ secrets.DEVELOPMENT_WEBSITE_DEPLOYMENT_API_KEY_ID }}
