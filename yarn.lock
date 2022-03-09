@@ -6628,7 +6628,6 @@ __metadata:
     eslint-plugin-import: ^2.25.4
     eslint-plugin-sonarjs: ^0.12.0
     prettier: ^2.5.1
-    prettier-config: "workspace:^"
   languageName: unknown
   linkType: soft
 
