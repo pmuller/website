@@ -1,0 +1,43 @@
+name: website
+
+on:
+  push:
+    branches:
+      - develop
+    paths:
+      - .github/workflows/website.yaml
+      - packages/website/**
+      - yarn.lock
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./packages/website
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 16
+      - run: yarn workspaces focus
+      - run: yarn build
+      - run: yarn check
+      - run: yarn test
+      - uses: actions/upload-artifact@v3
+        with:
+          name: website-${{ github.ref }}
+          path: public/
+          if-no-files-found: error
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v3
+        with:
+          name: website-${{ github.ref }}
+      - run: |
+          pwd
+          ls -lh
+          ls -lh public
