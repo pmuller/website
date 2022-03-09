@@ -22,6 +22,7 @@ export const deployCloudfrontDistribution = (
     defaultRootObject: "index.html",
     defaultCacheBehavior: {
       targetOriginId: contentBucketId,
+      compress: true,
       viewerProtocolPolicy: "redirect-to-https",
       allowedMethods: ["GET", "HEAD", "OPTIONS"],
       cachedMethods: ["GET", "HEAD", "OPTIONS"],
