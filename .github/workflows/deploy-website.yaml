@@ -38,7 +38,12 @@ jobs:
         with:
           name: website-${{ github.ref_name }}
           path: build
-      - run: |
-          pwd
-          ls -lh
-          ls -lh build
+      - uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.DEVELOPMENT_WEBSITE_DEPLOYMENT_API_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.DEVELOPMENT_WEBSITE_DEPLOYMENT_API_KEY_SECRET }}
+          aws-region: eu-west-1
+      - name: Upload to S3
+        run: aws s3 sync --delete . s3://website-content-2b49eb0
+      - name: Invalidate Cloudfront distribution cache
+        run: aws cloudfront create-invalidation --distribution-id E11E2PQNYH0SLV --paths "/*"
