@@ -54,4 +54,11 @@ export const deployCloudfrontDistribution = (
     viewerCertificate: {
       cloudfrontDefaultCertificate: true,
     },
+    customErrorResponses: [
+      {
+        errorCode: 404,
+        responseCode: 404,
+        responsePagePath: "/404.html",
+      },
+    ],
   });
