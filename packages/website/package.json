@@ -6,7 +6,7 @@
     "build": "gatsby build",
     "check:eslint": "eslint --max-warnings 0 ./src",
     "check:prettier": "prettier --check .",
-    "check:stylelint": "stylelint src/**/*.tsx",
+    "check:stylelint": "stylelint src/**/*.tsx gatsby-browser.js",
     "check": "yarn check:prettier && yarn check:stylelint && yarn check:eslint",
     "clean": "rm -rf ./public",
     "server": "gatsby develop",
