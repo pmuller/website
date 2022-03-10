@@ -1,5 +1,5 @@
 import { ContentBucket, GithubDeploymentApiKey } from "./components";
-import { repository } from "./git";
+import { repositoryName } from "./git";
 import { deployCloudfrontDistribution } from "./helpers";
 import { cloudfront, s3 } from "@pulumi/aws";
 
@@ -20,9 +20,8 @@ export const cloudfrontDistributionDomainName =
   cloudfrontDistribution.domainName;
 export const contentBucketId = contentBucket.id;
 export const logsBucketId = logsBucket.id;
-export const repositoryHtmlUrl = repository.htmlUrl;
 
 new GithubDeploymentApiKey("website", {
   contentBucketArn: contentBucket.arn,
-  repository: repository.name,
+  repository: repositoryName,
 });
