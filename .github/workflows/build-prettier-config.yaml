@@ -1,4 +1,4 @@
-name: prettier-config
+name: Build prettier-config
 
 on:
   push:
