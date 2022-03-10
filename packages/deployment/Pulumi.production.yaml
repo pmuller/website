@@ -1,0 +1,4 @@
+config:
+  aws:region: eu-west-1
+  github:token:
+    secure: AAABAMQnsreF3H+SrlpX+fAwWsYFKFNwoJefr5/ZnwuVufFLQJjqktMXoDGU93LJu1O+4hysWkSbmz5DoDzv+qKexUk4Tl06
