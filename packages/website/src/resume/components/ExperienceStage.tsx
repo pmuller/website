@@ -1,14 +1,17 @@
 import React from "react";
 
 import { ExperienceStage as Props } from "../types";
+import { ExperienceStageContainer } from "./ExperienceStageContainer";
+import { ExperienceStageDates } from "./ExperienceStageDates";
 
 export const ExperienceStage: React.FC<Props> = (props) => (
-  <div>
-    <div>Title: {props.title}</div>
-    <div>Start: {props.startDate.toISOString()}</div>
-    <div>End: {props.endDate?.toISOString()}</div>
-    <div>Location: {props.location}</div>
-    <div>Company: {props.company.name}</div>
-    <div>Description: {props.description}</div>
-  </div>
+  <ExperienceStageContainer>
+    <div className="title">{props.title}</div>
+    <div className="company">
+      <div className="name">{props.company.name}</div>
+      <div className="location">({props.location})</div>
+    </div>
+    <ExperienceStageDates start={props.startDate} end={props.endDate} />
+    <div className="description">{props.description}</div>
+  </ExperienceStageContainer>
 );
