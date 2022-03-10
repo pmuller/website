@@ -1,13 +1,23 @@
 name: Deploy website
 
 on:
-  push:
-    branches:
-      - develop
-    paths:
-      - .github/workflows/deploy-website.yaml
-      - packages/website/**
-      - yarn.lock
+  workflow_call:
+    secrets:
+      aws-access-key-id:
+        required: true
+      aws-secret-access-key:
+        required: true
+    inputs:
+      aws-region:
+        type: string
+        required: false
+        default: eu-west-1
+      content-bucket-id:
+        type: string
+        required: true
+      cloudfront-distribution-id:
+        type: string
+        required: true
 
 jobs:
   build:
@@ -39,10 +49,10 @@ jobs:
           name: website-${{ github.ref_name }}
       - uses: aws-actions/configure-aws-credentials@v1
         with:
-          aws-access-key-id: ${{ secrets.DEVELOPMENT_WEBSITE_DEPLOYMENT_API_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.DEVELOPMENT_WEBSITE_DEPLOYMENT_API_KEY_SECRET }}
-          aws-region: eu-west-1
+          aws-access-key-id: ${{ secrets.aws-access-key-id }}
+          aws-secret-access-key: ${{ secrets.aws-secret-access-key }}
+          aws-region: ${{ inputs.aws-region }}
       - name: Upload to S3
-        run: aws s3 sync --no-progress --delete . s3://website-content-2b49eb0
+        run: aws s3 sync --no-progress --delete . s3://${{ inputs.content-bucket-id }}
       - name: Invalidate Cloudfront distribution cache
-        run: aws cloudfront create-invalidation --distribution-id E11E2PQNYH0SLV --paths "/*"
+        run: aws cloudfront create-invalidation --distribution-id ${{ inputs.cloudfront-distribution-id }} --paths "/*"

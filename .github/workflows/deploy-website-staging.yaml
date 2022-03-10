@@ -1,0 +1,22 @@
+name: Deploy website staging
+
+on:
+  push:
+    branches:
+      - develop
+    paths:
+      - .github/workflows/deploy-website-staging.yaml
+      - .github/workflows/deploy-website.yaml
+      - packages/website/**
+      - yarn.lock
+
+jobs:
+  build:
+    uses: pmuller/website/.github/workflows/deploy-website.yaml@develop
+    with:
+      aws-region: eu-west-1
+      content-bucket-id: website-content-2b49eb0
+      cloudfront-distribution-id: E11E2PQNYH0SLV
+    secrets:
+      aws-access-key-id: ${{ secrets.DEVELOPMENT_WEBSITE_DEPLOYMENT_API_KEY_ID }}
+      aws-secret-access-key: ${{ secrets.DEVELOPMENT_WEBSITE_DEPLOYMENT_API_KEY_SECRET }}
