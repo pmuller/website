@@ -6,7 +6,7 @@ on:
       - main
       - develop
     paths:
-      - .github/workflows/eslint-config-typescript.yaml
+      - .github/workflows/build-eslint-config-typescript.yaml
       - packages/eslint-config-typescript/**
       - yarn.lock
 

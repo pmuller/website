@@ -6,7 +6,7 @@ on:
       - main
       - develop
     paths:
-      - .github/workflows/prettier-config.yaml
+      - .github/workflows/build-prettier-config.yaml
       - packages/prettier-config/**
       - yarn.lock
 

@@ -6,7 +6,7 @@ on:
       - main
       - develop
     paths:
-      - .github/workflows/deployment.yaml
+      - .github/workflows/build-deployment.yaml
       - packages/deployment/**
       - yarn.lock
 

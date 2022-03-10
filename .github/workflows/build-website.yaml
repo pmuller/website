@@ -6,7 +6,7 @@ on:
       - main
       - develop
     paths:
-      - .github/workflows/website.yaml
+      - .github/workflows/build-website.yaml
       - packages/website/**
       - yarn.lock
 
