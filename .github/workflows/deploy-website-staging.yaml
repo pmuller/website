@@ -11,7 +11,7 @@ on:
       - yarn.lock
 
 jobs:
-  build:
+  deploy:
     uses: pmuller/website/.github/workflows/deploy-website.yaml@develop
     with:
       aws-region: eu-west-1
