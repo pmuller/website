@@ -43,6 +43,6 @@ jobs:
           aws-secret-access-key: ${{ secrets.DEVELOPMENT_WEBSITE_DEPLOYMENT_API_KEY_SECRET }}
           aws-region: eu-west-1
       - name: Upload to S3
-        run: aws s3 sync --delete . s3://website-content-2b49eb0
+        run: aws s3 sync --no-progress --delete . s3://website-content-2b49eb0
       - name: Invalidate Cloudfront distribution cache
         run: aws cloudfront create-invalidation --distribution-id E11E2PQNYH0SLV --paths "/*"
