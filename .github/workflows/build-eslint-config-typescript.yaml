@@ -2,6 +2,9 @@ name: Build eslint-config-typescript
 
 on:
   push:
+    branches-ignore:
+      - main
+      - develop
     paths:
       - .github/workflows/eslint-config-typescript.yaml
       - packages/eslint-config-typescript/**

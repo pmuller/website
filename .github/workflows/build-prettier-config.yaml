@@ -2,6 +2,9 @@ name: Build prettier-config
 
 on:
   push:
+    branches-ignore:
+      - main
+      - develop
     paths:
       - .github/workflows/prettier-config.yaml
       - packages/prettier-config/**

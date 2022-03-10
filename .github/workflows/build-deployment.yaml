@@ -2,6 +2,9 @@ name: Build deployment
 
 on:
   push:
+    branches-ignore:
+      - main
+      - develop
     paths:
       - .github/workflows/deployment.yaml
       - packages/deployment/**

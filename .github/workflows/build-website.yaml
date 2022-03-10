@@ -2,6 +2,9 @@ name: Build website
 
 on:
   push:
+    branches-ignore:
+      - main
+      - develop
     paths:
       - .github/workflows/website.yaml
       - packages/website/**
