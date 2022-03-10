@@ -1,0 +1,22 @@
+name: Deploy website production
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/deploy-website-production.yaml
+      - .github/workflows/deploy-website.yaml
+      - packages/website/**
+      - yarn.lock
+
+jobs:
+  deploy:
+    uses: pmuller/website/.github/workflows/deploy-website.yaml@main
+    with:
+      aws-region: eu-west-1
+      content-bucket-id: website-content-47cf131
+      cloudfront-distribution-id: E336LBE6Q393OX
+    secrets:
+      aws-access-key-id: ${{ secrets.PRODUCTION_WEBSITE_DEPLOYMENT_API_KEY_ID }}
+      aws-secret-access-key: ${{ secrets.PRODUCTION_WEBSITE_DEPLOYMENT_API_KEY_SECRET }}
