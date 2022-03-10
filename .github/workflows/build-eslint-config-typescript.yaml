@@ -1,0 +1,17 @@
+name: Build eslint-config-typescript
+
+on:
+  push:
+    branches-ignore:
+      - main
+      - develop
+    paths:
+      - .github/workflows/build-eslint-config-typescript.yaml
+      - packages/eslint-config-typescript/**
+      - yarn.lock
+
+jobs:
+  build:
+    uses: pmuller/website/.github/workflows/build.yaml@develop
+    with:
+      workDir: ./packages/eslint-config-typescript

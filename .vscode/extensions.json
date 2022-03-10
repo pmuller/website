@@ -2,6 +2,8 @@
   "recommendations": [
     "arcanis.vscode-zipfs",
     "dbaeumer.vscode-eslint",
-    "esbenp.prettier-vscode"
+    "esbenp.prettier-vscode",
+    // XXX: Need to use stylelint 0.87.6 because we use stylelint 13.x because we use linaria 2.x (pfew!)
+    "stylelint.vscode-stylelint"
   ]
 }

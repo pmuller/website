@@ -1,0 +1,58 @@
+name: Deploy website
+
+on:
+  workflow_call:
+    secrets:
+      aws-access-key-id:
+        required: true
+      aws-secret-access-key:
+        required: true
+    inputs:
+      aws-region:
+        type: string
+        required: false
+        default: eu-west-1
+      content-bucket-id:
+        type: string
+        required: true
+      cloudfront-distribution-id:
+        type: string
+        required: true
+
+jobs:
+  build:
+    defaults:
+      run:
+        working-directory: ./packages/website
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 16
+      - run: yarn workspaces focus
+      - run: yarn build
+      - run: yarn check
+      - run: yarn test
+      - uses: actions/upload-artifact@v3
+        with:
+          name: website-${{ github.ref_name }}
+          path: packages/website/public/
+          if-no-files-found: error
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v3
+        with:
+          name: website-${{ github.ref_name }}
+      - uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.aws-access-key-id }}
+          aws-secret-access-key: ${{ secrets.aws-secret-access-key }}
+          aws-region: ${{ inputs.aws-region }}
+      - name: Upload to S3
+        run: aws s3 sync --no-progress --delete . s3://${{ inputs.content-bucket-id }}
+      - name: Invalidate Cloudfront distribution cache
+        run: aws cloudfront create-invalidation --distribution-id ${{ inputs.cloudfront-distribution-id }} --paths "/*"

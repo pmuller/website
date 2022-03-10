@@ -1,0 +1,17 @@
+name: Build website
+
+on:
+  push:
+    branches-ignore:
+      - main
+      - develop
+    paths:
+      - .github/workflows/build-website.yaml
+      - packages/website/**
+      - yarn.lock
+
+jobs:
+  build:
+    uses: pmuller/website/.github/workflows/build.yaml@develop
+    with:
+      workDir: ./packages/website
