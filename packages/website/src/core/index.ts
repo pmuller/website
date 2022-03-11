@@ -1,1 +1,1 @@
-export { Layout, LayoutContainer } from "./components";
+export { BasePage, Layout } from "./components";

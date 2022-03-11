@@ -1,2 +1,2 @@
 export { Layout } from "./Layout";
-export { LayoutContainer } from "./LayoutContainer";
+export { BasePage } from "./BasePage";

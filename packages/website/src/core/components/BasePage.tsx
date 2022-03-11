@@ -1,6 +1,6 @@
 import { styled } from "linaria/react";
 
-export const LayoutContainer = styled.main`
+export const BasePage = styled.main`
   max-width: 1024px;
   margin: 0 auto;
 `;
