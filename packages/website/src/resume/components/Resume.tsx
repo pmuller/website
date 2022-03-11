@@ -1,16 +1,19 @@
 import React from "react";
 
+import { LayoutContainer } from "../../core";
 import { Education } from "./Education";
 import { Experience } from "./Experience";
 import { Header } from "./Header";
-import { ResumeContainer } from "./ResumeContainer";
+import { Layout } from "./Layout";
 import { Summary } from "./Summary";
 
 export const Resume: React.FC = () => (
-  <ResumeContainer>
-    <Header />
-    <Summary />
-    <Experience />
-    <Education />
-  </ResumeContainer>
+  <LayoutContainer>
+    <Layout>
+      <Header />
+      <Summary />
+      <Experience />
+      <Education />
+    </Layout>
+  </LayoutContainer>
 );
