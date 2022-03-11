@@ -1,4 +1,6 @@
 /* eslint-disable sonarjs/no-duplicate-string */
+import * as React from "react";
+
 import { ExperienceStage } from "../types";
 
 export const experience: ExperienceStage[] = [
@@ -7,10 +9,24 @@ export const experience: ExperienceStage[] = [
     location: "Metz, France",
     company: { name: "Happy Teams", url: "https://happyteams.events/en" },
     title: "Chief Technology Officer (& co-founder)",
-    description: `\
-* Hiring and management of the software engineering team (3 developers)
-* Design of [The Diamond Heist](https://happyteams.events/en/the-diamond-heist) game
-`,
+    description: (
+      <ul>
+        <li>
+          Hiring and management of the software engineering team (3 developers)
+        </li>
+        <li>
+          Design of{" "}
+          <a
+            rel="noopener"
+            target="_blank"
+            href="https://happyteams.events/en/the-diamond-heist"
+          >
+            The Diamond Heist
+          </a>{" "}
+          game
+        </li>
+      </ul>
+    ),
     techStack: ["TypeScript", "Pulumi", "GraphQL", "AWS", "React"],
   },
   {
@@ -19,11 +35,17 @@ export const experience: ExperienceStage[] = [
     location: "Hong Kong",
     company: { name: "AXA Investment Managers Chorus" },
     title: "Chief Technology Officer",
-    description: `\
-* Hiring and management of the software engineering team (20 developers)
-* Design and management the fund's Cloud infrastructure on AWS
-* Design and implementation of the job scheduling system
-`,
+    description: (
+      <ul>
+        <li>
+          Hiring and management of the software engineering team (20 developers)
+        </li>
+        <li>
+          Design and implementation of the fund's cloud infrastructure on AWS
+        </li>
+        <li>Design and implementation of the job scheduling system</li>
+      </ul>
+    ),
     techStack: [
       "Linux",
       "AWS",
@@ -59,10 +81,15 @@ export const experience: ExperienceStage[] = [
     location: "Paris, France",
     company: { name: "Criteo", url: "https://criteo.com" },
     title: "Lead Software Engineer",
-    description: `\
-* Built a software engineering team focused on infrastructure automation software
-* Design of a Data Center Information Management system (DCIM)
-`,
+    description: (
+      <ul>
+        <li>
+          Built a software engineering team focused on infrastructure automation
+          software (5 developers)
+        </li>
+        <li>Design of a Data Center Information Management system (DCIM)</li>
+      </ul>
+    ),
     techStack: ["Python", "Django", "Linux"],
   },
   {
@@ -71,12 +98,14 @@ export const experience: ExperienceStage[] = [
     location: "Paris, France",
     company: { name: "Capital Fund Management", url: "https://www.cfm.fr" },
     title: "Software Engineer",
-    description: `\
-* Development of data management systems
-* Development of the research job management service
-* Automation of production jobs management (CICD)
-* Refactoring of research code for production
-`,
+    description: (
+      <ul>
+        <li>Development of data management systems</li>
+        <li>Development of the research job management service</li>
+        <li>Automation of production jobs management (CICD)</li>
+        <li>Refactoring of research code for production</li>
+      </ul>
+    ),
     techStack: ["Linux", "Slurm", "Python", "Pandas", "Puppet"],
   },
   {
@@ -85,11 +114,16 @@ export const experience: ExperienceStage[] = [
     location: "Paris, France",
     company: { name: "Capital Fund Management", url: "https://www.cfm.fr" },
     title: "Systems Engineer",
-    description: `\
-* Design, deployment, management & support of the research HPC platform
-* Design, deployment & management of the logging platform
-* Management of Atlassian services
-`,
+    description: (
+      <ul>
+        <li>
+          Design, deployment, management &amp; support of the research HPC
+          platform
+        </li>
+        <li>Design, deployment &amp; management of the logging platform</li>
+        <li>Management of Atlassian services</li>
+      </ul>
+    ),
     techStack: [
       "Linux",
       "Puppet",
@@ -108,10 +142,18 @@ export const experience: ExperienceStage[] = [
     location: "Remote",
     company: { name: "Tapinoma" },
     title: "Systems Engineer",
-    description: `\
-* Design, deployment and management of the company network infrastructure
-* Design, deployment and management of the software engineering stack for iOS apps developers
-`,
+    description: (
+      <ul>
+        <li>
+          Design, deployment and management of the company network
+          infrastructure
+        </li>
+        <li>
+          Design, deployment and management of the software engineering stack
+          for iOS apps developers
+        </li>
+      </ul>
+    ),
     techStack: [
       "Mac OS X Server",
       "Cisco PIX",
@@ -130,12 +172,17 @@ export const experience: ExperienceStage[] = [
     location: "Paris, France",
     company: { name: "Altran", url: "https://altran.fr" },
     title: "Network Security Instructor & Training Center Manager",
-    description: `\
-* Setup of a network security training center in partnership with Juniper Networks
-* Taught Juniper Networks technologies to 200+ engineers
-* Managed 1 instructor
-* Design and management of the training center infrastructure
-`,
+    description: (
+      <ul>
+        <li>
+          Setup of a network security training center in partnership with
+          Juniper Networks
+        </li>
+        <li>Taught Juniper Networks technologies to 200+ engineers</li>
+        <li>Managed 1 instructor</li>
+        <li>Design and management of the training center infrastructure</li>
+      </ul>
+    ),
     techStack: [
       "ScreenOS",
       "JUNOS",
@@ -152,7 +199,15 @@ export const experience: ExperienceStage[] = [
     location: "Paris, France",
     company: { name: "Kewego", url: "https://en.wikipedia.org/wiki/Kewego" },
     title: "Network Engineer",
-    description: "Design and deployment of AS42096 BGP routers",
+    description: (
+      <>
+        Design and deployment of{" "}
+        <a href="https://bgpview.io/asn/42096" rel="noopener" target="_blank">
+          AS42096
+        </a>{" "}
+        BGP infrastructure
+      </>
+    ),
     techStack: ["BGP", "OpenBSD"],
   },
   {
@@ -161,10 +216,12 @@ export const experience: ExperienceStage[] = [
     location: "Paris, France",
     company: { name: "Juniper Networks", url: "https://juniper.net" },
     title: "Systems Engineer, Intern",
-    description: `\
-* Lab network refactoring and documentation
-* Various troubleshooting and PoCs
-`,
+    description: (
+      <ul>
+        <li>Lab network refactoring and documentation</li>
+        <li>Various troubleshooting and PoCs</li>
+      </ul>
+    ),
     techStack: ["JUNOS", "ScreenOS", "Linux", "OSPF", "BGP", "IPSec"],
   },
   {
@@ -173,12 +230,23 @@ export const experience: ExperienceStage[] = [
     location: "Paris, France",
     company: { name: "Waycom", url: "https://waycom.net" },
     title: "Chief Technology Officer",
-    description: `\
-* Managed the tech team (10 engineers)
-* Design and implementation of the AS30889 network
-* Design of large scale IPSec networks
-* Design of the company ISP-grade systems (DNS, e-mail, monitoring, etc.)
-`,
+    description: (
+      <ul>
+        <li>Managed the tech team (10 engineers)</li>
+        <li>
+          Design and implementation of the{" "}
+          <a href="https://bgpview.io/asn/30889" rel="noopener" target="_blank">
+            AS30889
+          </a>{" "}
+          network
+        </li>
+        <li>Design of large scale IPSec networks (100+ nodes)</li>
+        <li>
+          Design of the company ISP-grade systems (DNS, e-mail, monitoring,
+          etc.)
+        </li>
+      </ul>
+    ),
     techStack: [
       "Linux",
       "Cisco IOS",

@@ -6,6 +6,6 @@ export type ExperienceStage = {
   endDate?: Date;
   location: string;
   company: Organization;
-  description: string;
+  description: string | JSX.Element;
   techStack?: string[];
 };
