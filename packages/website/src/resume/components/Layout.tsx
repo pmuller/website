@@ -7,7 +7,16 @@ export const Layout = styled.div`
   grid-template-columns: 4fr 1fr;
   grid-template-areas:
     "identity   contact"
-    "experience summary"
-    "experience education"
-    "experience .";
+    "summary    summary"
+    "experience experience"
+    "education  education";
+
+  /* iPhone SE landscape and bigger */
+  @media (min-width: 568px) {
+    grid-template-areas:
+      "identity   contact"
+      "experience summary"
+      "experience education"
+      "experience .";
+  }
 `;
