@@ -5,7 +5,7 @@ import { ExperienceStage } from "./ExperienceStage";
 import { Section } from "./Section";
 
 export const Experience: React.FC = () => (
-  <Section>
+  <Section style={{ gridArea: "experience" }}>
     <h2>Work Experience</h2>
     {experience.map((stage, index) => (
       <ExperienceStage key={index} {...stage} />
