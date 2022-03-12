@@ -16,6 +16,7 @@ export const ExperienceSubStageContainer = styled.div`
       & > .dates {
         flex-grow: 1;
         text-align: right;
+        color: #555;
       }
     }
   }
