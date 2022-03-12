@@ -17,6 +17,6 @@ Still on-going.
     },
     degree: "Master in Information Technology",
     startDate: new Date("2005-09-05"),
-    endDate: new Date("2005-06-30"),
+    endDate: new Date("2006-06-30"),
   },
 ];
