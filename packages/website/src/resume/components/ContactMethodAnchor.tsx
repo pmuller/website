@@ -14,6 +14,7 @@ export const ContactMethodAnchor = styled(ExternalLink)`
   @media (min-width: 568px) {
     & > .label {
       display: block;
+      align-self: center;
     }
   }
 `;
