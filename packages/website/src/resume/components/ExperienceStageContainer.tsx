@@ -5,12 +5,6 @@ export const ExperienceStageContainer = styled.div`
   display: flex;
   flex-direction: column;
 
-  & > .company {
-    display: flex;
-    gap: 0.25rem;
-    margin-bottom: 0.5rem;
-  }
-
   & > .subStages {
     margin-left: 0.5rem;
   }

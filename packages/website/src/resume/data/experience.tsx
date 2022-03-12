@@ -6,8 +6,11 @@ import { ExperienceStage } from "../types";
 
 export const experience: ExperienceStage[] = [
   {
-    company: { name: "Happy Teams", url: "https://happyteams.events/en" },
-    location: "Metz, France",
+    company: {
+      name: "Happy Teams",
+      location: "Metz, France",
+      url: "https://happyteams.events/en",
+    },
     stages: [
       {
         startDate: new Date("2021-01-04"),
@@ -34,9 +37,9 @@ export const experience: ExperienceStage[] = [
   {
     company: {
       name: "AXA Investment Managers Chorus",
+      location: "Hong Kong",
       url: "https://www.axa-im.com/what-we-do/alternatives#anchor-f45d1552-2096-429e-8bed-3365c32a3dd7",
     },
-    location: "Hong Kong",
     stages: [
       {
         startDate: new Date("2016-07-25"),
@@ -68,8 +71,11 @@ export const experience: ExperienceStage[] = [
     ],
   },
   {
-    company: { name: "The Box Escape Games", url: "https://the-box.fr/en/" },
-    location: "Metz, France",
+    company: {
+      name: "The Box Escape Games",
+      location: "Metz, France",
+      url: "https://the-box.fr/en/",
+    },
     stages: [
       {
         startDate: new Date("2015-09-26"),
@@ -91,8 +97,11 @@ export const experience: ExperienceStage[] = [
     ],
   },
   {
-    company: { name: "Criteo", url: "https://criteo.com" },
-    location: "Paris, France",
+    company: {
+      name: "Criteo",
+      location: "Paris, France",
+      url: "https://criteo.com",
+    },
     stages: [
       {
         startDate: new Date("2015-09-07"),
@@ -114,8 +123,11 @@ export const experience: ExperienceStage[] = [
     ],
   },
   {
-    company: { name: "Capital Fund Management", url: "https://www.cfm.fr" },
-    location: "Paris, France",
+    company: {
+      name: "Capital Fund Management",
+      location: "Paris, France",
+      url: "https://www.cfm.fr",
+    },
     stages: [
       {
         startDate: new Date("2013-10-07"),
@@ -160,8 +172,10 @@ export const experience: ExperienceStage[] = [
     ],
   },
   {
-    company: { name: "Tapinoma" },
-    location: "Remote",
+    company: {
+      name: "Tapinoma",
+      location: "Remote",
+    },
     stages: [
       {
         startDate: new Date("2008-10-20"),
@@ -194,8 +208,11 @@ export const experience: ExperienceStage[] = [
     ],
   },
   {
-    company: { name: "Altran", url: "https://altran.fr" },
-    location: "Paris, France",
+    company: {
+      name: "Altran",
+      location: "Paris, France",
+      url: "https://altran.fr",
+    },
     stages: [
       {
         startDate: new Date("2007-03-05"),
@@ -225,8 +242,11 @@ export const experience: ExperienceStage[] = [
     ],
   },
   {
-    company: { name: "Kewego", url: "https://en.wikipedia.org/wiki/Kewego" },
-    location: "Paris, France",
+    company: {
+      name: "Kewego",
+      location: "Paris, France",
+      url: "https://en.wikipedia.org/wiki/Kewego",
+    },
     stages: [
       {
         startDate: new Date("2006-12-01"),
@@ -246,8 +266,11 @@ export const experience: ExperienceStage[] = [
     ],
   },
   {
-    company: { name: "Juniper Networks", url: "https://juniper.net" },
-    location: "Paris, France",
+    company: {
+      name: "Juniper Networks",
+      location: "Paris, France",
+      url: "https://juniper.net",
+    },
     stages: [
       {
         startDate: new Date("2006-06-26"),
@@ -264,8 +287,11 @@ export const experience: ExperienceStage[] = [
     ],
   },
   {
-    company: { name: "Waycom", url: "https://waycom.net" },
-    location: "Paris, France",
+    company: {
+      name: "Waycom",
+      location: "Paris, France",
+      url: "https://waycom.net",
+    },
     stages: [
       {
         startDate: new Date("2001-07-23"),
