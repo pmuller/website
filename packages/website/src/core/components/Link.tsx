@@ -9,7 +9,7 @@ export const Link = styled.a`
   }
 
   &:hover {
-    color: #000;
+    color: var(--color-primary);
     text-decoration: none;
   }
 `;
