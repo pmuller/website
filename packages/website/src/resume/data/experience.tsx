@@ -8,7 +8,7 @@ export const experience: ExperienceStage[] = [
     startDate: new Date("2021-01-04"),
     location: "Metz, France",
     company: { name: "Happy Teams", url: "https://happyteams.events/en" },
-    title: "Chief Technology Officer (& co-founder)",
+    title: "Chief Technology Officer, co-founder",
     description: (
       <ul>
         <li>
@@ -61,7 +61,7 @@ export const experience: ExperienceStage[] = [
     endDate: new Date("2021-12-31"),
     location: "Metz, France",
     company: { name: "The Box Escape Games", url: "https://the-box.fr/en/" },
-    title: "Chief Technology Officer (& co-founder)",
+    title: "Chief Technology Officer, co-founder",
     description: "Design & implementation of several in-room games",
     techStack: [
       "Linux",
