@@ -9,11 +9,6 @@ export const ExperienceStageContainer = styled.div`
     display: flex;
     gap: 0.25rem;
     margin-bottom: 0.5rem;
-
-    & > .name {
-      color: #2471a3;
-      font-weight: bold;
-    }
   }
 
   & > .subStages {
