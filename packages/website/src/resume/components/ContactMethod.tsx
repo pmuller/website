@@ -6,7 +6,7 @@ import { ContactMethodAnchor } from "./ContactMethodAnchor";
 
 export const ContactMethod: React.FC<Props> = ({ label, url, icon }) => (
   <ContactMethodAnchor href={url} rel="noopener" target="_blank">
-    {label}
+    <span className="label">{label}</span>
     <Icon path={icon} size={1} />
   </ContactMethodAnchor>
 );
