@@ -2,7 +2,10 @@ import { EducationStage } from "../types";
 
 export const education: EducationStage[] = [
   {
-    school: { name: "The Internet" },
+    school: {
+      name: "The Internet",
+      url: "https://en.wikipedia.org/wiki/Internet",
+    },
     startDate: new Date("1997-07-07"),
     description: `\
 Self-taught with the help of the Internet and its wonderful crowd of passionate technologists who share their knowledge.
