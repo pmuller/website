@@ -1,8 +1,17 @@
 import { styled } from "linaria/react";
 
 export const ExperienceSubStageContainer = styled.div`
-  & > .title {
-    font-weight: bold;
+  & > .header {
+    display: flex;
+
+    & > .title {
+      font-weight: bold;
+    }
+
+    & > .dates {
+      flex-grow: 1;
+      text-align: right;
+    }
   }
 
   & > .body {
