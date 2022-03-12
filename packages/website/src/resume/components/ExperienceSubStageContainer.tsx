@@ -3,14 +3,20 @@ import { styled } from "linaria/react";
 export const ExperienceSubStageContainer = styled.div`
   & > .header {
     display: flex;
+    flex-direction: column;
 
     & > .title {
       font-weight: bold;
     }
 
-    & > .dates {
-      flex-grow: 1;
-      text-align: right;
+    /* iPhone SE landscape and bigger */
+    @media (min-width: 568px) {
+      flex-direction: row;
+
+      & > .dates {
+        flex-grow: 1;
+        text-align: right;
+      }
     }
   }
 
