@@ -1,5 +1,6 @@
 import React from "react";
 
+import { ExternalLink } from "../../core";
 import { DelayedEmailAddress } from "./DelayedEmailAddress";
 import { IntroductionContainer } from "./IntroductionContainer";
 
@@ -14,18 +15,14 @@ export const Introduction: React.FC = () => (
     </p>
     <p>
       I am currently building awesome team building games at{" "}
-      <a target="_blank" rel="noopener" href="https://happyteams.events/en">
+      <ExternalLink href="https://happyteams.events/en">
         Happy Teams
-      </a>
+      </ExternalLink>
       . If you are part of a remote team and enjoy escape rooms, you should
       check out our latest game:{" "}
-      <a
-        target="_blank"
-        rel="noopener"
-        href="https://www.happyteams.events/en/the-diamond-heist"
-      >
+      <ExternalLink href="https://www.happyteams.events/en/the-diamond-heist">
         The Diamond Heist
-      </a>
+      </ExternalLink>
       .
     </p>
     <p>

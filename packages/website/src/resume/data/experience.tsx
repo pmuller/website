@@ -1,6 +1,7 @@
 /* eslint-disable sonarjs/no-duplicate-string */
 import * as React from "react";
 
+import { ExternalLink } from "../../core";
 import { ExperienceStage } from "../types";
 
 export const experience: ExperienceStage[] = [
@@ -19,13 +20,9 @@ export const experience: ExperienceStage[] = [
             </li>
             <li>
               Design of{" "}
-              <a
-                rel="noopener"
-                target="_blank"
-                href="https://happyteams.events/en/the-diamond-heist"
-              >
+              <ExternalLink href="https://happyteams.events/en/the-diamond-heist">
                 The Diamond Heist
-              </a>{" "}
+              </ExternalLink>{" "}
               game
             </li>
           </ul>
@@ -235,13 +232,9 @@ export const experience: ExperienceStage[] = [
         description: (
           <>
             Design and deployment of{" "}
-            <a
-              href="https://bgpview.io/asn/42096"
-              rel="noopener"
-              target="_blank"
-            >
+            <ExternalLink href="https://bgpview.io/asn/42096">
               AS42096
-            </a>{" "}
+            </ExternalLink>{" "}
             BGP infrastructure
           </>
         ),
@@ -280,13 +273,9 @@ export const experience: ExperienceStage[] = [
             <li>Managed the tech team (10 engineers)</li>
             <li>
               Design and implementation of the{" "}
-              <a
-                href="https://bgpview.io/asn/30889"
-                rel="noopener"
-                target="_blank"
-              >
+              <ExternalLink href="https://bgpview.io/asn/30889">
                 AS30889
-              </a>{" "}
+              </ExternalLink>{" "}
               network
             </li>
             <li>Design of large scale IPSec networks (100+ nodes)</li>

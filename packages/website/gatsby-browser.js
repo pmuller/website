@@ -7,17 +7,5 @@ css`
     body {
       margin: 0;
     }
-
-    a,
-    a:visited {
-      color: #666;
-      text-underline-offset: 0.1rem;
-      text-decoration-style: dotted;
-    }
-
-    a:hover {
-      color: #000;
-      text-decoration: none;
-    }
   }
 `;

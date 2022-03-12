@@ -1,17 +1,12 @@
 import { styled } from "linaria/react";
 
+import { ExternalLink } from "../../core";
+
 // XXX: De-dupplicate these anchors style with the global ones
-export const CompanyNameAnchor = styled.a`
+export const CompanyNameAnchor = styled(ExternalLink)`
   &,
   &:visited {
     color: #2471a3;
     font-weight: bold;
-    text-underline-offset: 0.1rem;
-    text-decoration-style: dotted;
-  }
-
-  &:hover {
-    color: #000;
-    text-decoration: none;
   }
 `;

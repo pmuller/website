@@ -1,5 +1,6 @@
 import React from "react";
 
+import { ExternalLink } from "../../core";
 import { IconImage } from "./IconImage";
 
 type Props = {
@@ -9,7 +10,7 @@ type Props = {
 };
 
 export const Icon: React.FC<Props> = ({ name, path, url }) => (
-  <a target="_blank" rel="noopener" href={url}>
+  <ExternalLink href={url}>
     <IconImage src={path} alt={name} />
-  </a>
+  </ExternalLink>
 );

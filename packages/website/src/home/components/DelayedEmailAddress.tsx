@@ -1,5 +1,7 @@
 import React from "react";
 
+import { Link } from "../../core";
+
 const realAddress = "philippe.muller@gmail.com";
 const bogusAddress = "wait@5seconds.com";
 const delay = 5000;
@@ -12,5 +14,5 @@ export const DelayedEmailAddress: React.FC = () => {
     return () => clearTimeout(id);
   }, []);
 
-  return <a href={`mailto:${address}`}>{address}</a>;
+  return <Link href={`mailto:${address}`}>{address}</Link>;
 };
