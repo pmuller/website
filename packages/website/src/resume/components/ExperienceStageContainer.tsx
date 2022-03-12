@@ -28,6 +28,10 @@ export const ExperienceStageContainer = styled.div`
     & ul {
       margin: 0;
       padding-left: 0.9rem;
+
+      & > li {
+        list-style-type: circle;
+      }
     }
   }
 `;
