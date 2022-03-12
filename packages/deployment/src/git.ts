@@ -7,4 +7,4 @@ export const repositoryName =
   // (development stacks)
   new Config().get("github_repository_name") ??
   // or create a new repository (production stack)
-  new Repository("website", { name: "website" }).name;
+  new Repository("website", { name: "website", hasIssues: true }).name;
