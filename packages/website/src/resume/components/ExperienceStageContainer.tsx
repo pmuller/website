@@ -17,15 +17,20 @@ export const ExperienceStageContainer = styled.div`
     }
   }
 
-  & > .description {
-    margin: 0.5rem 1rem;
+  & > .body {
+    margin: 0.5rem 0 0.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 
-    & ul {
-      margin: 0;
-      padding-left: 0.9rem;
+    & > .description {
+      & ul {
+        margin: 0;
+        padding-left: 0.9rem;
 
-      & > li {
-        list-style-type: circle;
+        & > li {
+          list-style-type: circle;
+        }
       }
     }
   }

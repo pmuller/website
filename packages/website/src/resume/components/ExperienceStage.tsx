@@ -12,6 +12,9 @@ export const ExperienceStage: React.FC<Props> = (props) => (
     </div>
     <div className="title">{props.title}</div>
     <ExperienceStageDates start={props.startDate} end={props.endDate} />
-    <div className="description">{props.description}</div>
+    <div className="body">
+      <div className="description">{props.description}</div>
+      <div className="stack">Stack: {props.techStack?.join(", ")}</div>
+    </div>
   </ExperienceStageContainer>
 );
