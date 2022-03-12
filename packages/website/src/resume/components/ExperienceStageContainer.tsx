@@ -23,6 +23,11 @@ export const ExperienceStageContainer = styled.div`
   }
 
   & > .description {
-    margin-top: 0.5rem;
+    margin: 0.5rem 1rem;
+
+    & ul {
+      margin: 0;
+      padding-left: 0.9rem;
+    }
   }
 `;
