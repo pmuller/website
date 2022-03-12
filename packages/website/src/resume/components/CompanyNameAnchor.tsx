@@ -6,7 +6,7 @@ import { ExternalLink } from "../../core";
 export const CompanyNameAnchor = styled(ExternalLink)`
   &,
   &:visited {
-    color: #2471a3;
+    color: var(--color-primary);
     font-weight: bold;
   }
 `;

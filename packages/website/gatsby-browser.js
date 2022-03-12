@@ -5,6 +5,7 @@ css`
   /* stylelint-disable-next-line selector-pseudo-class-no-unknown */
   :global() {
     body {
+      --color-primary: #2471a3;
       margin: 0;
     }
   }
