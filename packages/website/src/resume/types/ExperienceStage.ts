@@ -1,11 +1,9 @@
+import { ExperienceSubStage } from "./ExperienceSubStage";
 import { Organization } from "./Organization";
 
 export type ExperienceStage = {
-  title: string;
-  startDate: Date;
-  endDate?: Date;
-  location: string;
   company: Organization;
-  description: string | JSX.Element;
-  techStack?: string[];
+  location: string;
+  // XXX: stage vs. sub-stage is not a great naming
+  stages: ExperienceSubStage[];
 };

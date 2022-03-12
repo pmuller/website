@@ -1,15 +1,14 @@
 import { styled } from "linaria/react";
 
 export const ExperienceStageContainer = styled.div`
-  margin-bottom: 1rem;
-
-  & > .title {
-    font-weight: bold;
-  }
+  margin-bottom: 0.5rem;
+  display: flex;
+  flex-direction: column;
 
   & > .company {
     display: flex;
     gap: 0.25rem;
+    margin-bottom: 0.5rem;
 
     & > .name {
       color: #2471a3;
@@ -17,21 +16,7 @@ export const ExperienceStageContainer = styled.div`
     }
   }
 
-  & > .body {
-    margin: 0.5rem 0 0.5rem 1rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-
-    & > .description {
-      & ul {
-        margin: 0;
-        padding-left: 0.9rem;
-
-        & > li {
-          list-style-type: circle;
-        }
-      }
-    }
+  & > .subStages {
+    margin-left: 0.5rem;
   }
 `;
