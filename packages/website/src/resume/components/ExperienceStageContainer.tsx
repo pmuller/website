@@ -17,11 +17,6 @@ export const ExperienceStageContainer = styled.div`
     }
   }
 
-  & > .dates,
-  & > .location {
-    display: inline;
-  }
-
   & > .description {
     margin: 0.5rem 1rem;
 
