@@ -1,10 +1,11 @@
 import { styled } from "linaria/react";
 
-export const IdentityContainer = styled.div`
+export const IdentityContainer = styled.h1`
   grid-area: identity;
   flex-grow: 1;
 
-  & > h2 {
-    color: #666;
+  & > .jobTitle {
+    color: var(--color-primary);
+    font-size: smaller;
   }
 `;
