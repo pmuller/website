@@ -7,7 +7,7 @@ type Props = {
   end?: Date;
 };
 
-export const ExperienceStageDates: React.FC<Props> = ({ start, end }) => (
+export const Dates: React.FC<Props> = ({ start, end }) => (
   <div className="dates">
     {formatDate(start)} - {formatEndDate(end)}
   </div>
