@@ -8,8 +8,7 @@ export const education: EducationStage[] = [
     },
     startDate: new Date("1997-07-07"),
     description: `\
-Self-taught with the help of the Internet and its wonderful crowd of passionate technologists who share their knowledge.
-Still on-going.
+Self-taught with the help of the Internet and its wonderful crowd of passionate technologists.
 `,
   },
   {
