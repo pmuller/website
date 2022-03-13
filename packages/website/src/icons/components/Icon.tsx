@@ -1,6 +1,6 @@
 import React from "react";
 
-import { ExternalLink } from "../../core";
+import { ExternalLink } from "../../links";
 import { IconImage } from "./IconImage";
 
 type Props = {

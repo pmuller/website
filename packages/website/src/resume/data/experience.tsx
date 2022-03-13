@@ -1,7 +1,7 @@
 /* eslint-disable sonarjs/no-duplicate-string */
 import * as React from "react";
 
-import { ExternalLink } from "../../core";
+import { ExternalLink } from "../../links";
 import { ExperienceStage } from "../types";
 
 export const experience: ExperienceStage[] = [

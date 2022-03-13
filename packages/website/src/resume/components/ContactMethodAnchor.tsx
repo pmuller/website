@@ -1,6 +1,6 @@
 import { styled } from "linaria/react";
 
-import { ExternalLink } from "../../core";
+import { ExternalLink } from "../../links";
 
 export const ContactMethodAnchor = styled(ExternalLink)`
   display: flex;

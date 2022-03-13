@@ -1,1 +1,1 @@
-export { BasePage, Layout, ExternalLink, Link } from "./components";
+export { BasePage, Layout } from "./components";

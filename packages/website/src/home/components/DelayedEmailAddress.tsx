@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Link } from "../../core";
+import { Link } from "../../links";
 
 const realAddress = "philippe.muller@gmail.com";
 const bogusAddress = "wait@5seconds.com";

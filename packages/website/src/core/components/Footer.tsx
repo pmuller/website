@@ -1,6 +1,6 @@
 import React from "react";
 
-import { ExternalLink } from "./ExternalLink";
+import { ExternalLink } from "../../links";
 import { FooterContainer } from "./FooterContainer";
 
 export const Footer: React.FC = () => (

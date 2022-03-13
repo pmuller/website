@@ -1,6 +1,6 @@
 import React from "react";
 
-import { ExternalLink } from "../../core";
+import { ExternalLink } from "../../links";
 import { DelayedEmailAddress } from "./DelayedEmailAddress";
 import { IntroductionContainer } from "./IntroductionContainer";
 
