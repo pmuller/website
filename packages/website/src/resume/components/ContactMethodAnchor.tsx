@@ -3,8 +3,7 @@ import { styled } from "linaria/react";
 import { ExternalLink } from "../../links";
 
 export const ContactMethodAnchor = styled(ExternalLink)`
-  display: flex;
-  gap: 0.25rem;
+  flex-direction: row-reverse;
 
   & > .label {
     display: none;

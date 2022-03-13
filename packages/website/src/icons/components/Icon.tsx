@@ -10,7 +10,5 @@ type Props = {
 };
 
 export const Icon: React.FC<Props> = ({ name, path, url }) => (
-  <ExternalLink href={url}>
-    <IconImage src={path} alt={name} />
-  </ExternalLink>
+  <ExternalLink href={url} icon={<IconImage src={path} alt={name} />} />
 );

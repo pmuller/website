@@ -1,15 +1,11 @@
-import { styled } from "linaria/react";
+import React, { FC } from "react";
 
-export const Link = styled.a`
-  &,
-  &:visited {
-    color: #666;
-    text-underline-offset: 0.1rem;
-    text-decoration-style: dotted;
-  }
+import { LinkProps } from "../types";
+import { Anchor } from "./Anchor";
 
-  &:hover {
-    color: var(--color-primary);
-    text-decoration: none;
-  }
-`;
+export const Link: FC<LinkProps> = ({ icon, children, ...props }) => (
+  <Anchor {...props}>
+    {icon}
+    {children && <span className="label">{children}</span>}
+  </Anchor>
+);
