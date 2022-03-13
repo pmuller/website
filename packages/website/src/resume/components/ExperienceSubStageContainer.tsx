@@ -13,10 +13,8 @@ export const ExperienceSubStageContainer = styled.div`
     @media (min-width: 568px) {
       flex-direction: row;
 
-      & > .dates {
+      & > .title {
         flex-grow: 1;
-        text-align: right;
-        color: #555;
       }
     }
   }

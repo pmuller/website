@@ -1,6 +1,9 @@
+import { mdiCalendarMonthOutline } from "@mdi/js";
+import Icon from "@mdi/react";
 import React from "react";
 
 import { formatDate, formatEndDate } from "../helpers";
+import { DatesContainer } from "./DatesContainer";
 
 type Props = {
   start: Date;
@@ -8,7 +11,8 @@ type Props = {
 };
 
 export const Dates: React.FC<Props> = ({ start, end }) => (
-  <div className="dates">
+  <DatesContainer>
+    <Icon path={mdiCalendarMonthOutline} size={0.7} />
     {formatDate(start)} - {formatEndDate(end)}
-  </div>
+  </DatesContainer>
 );
