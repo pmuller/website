@@ -12,7 +12,7 @@ export const ExperienceSubStageContainer = styled.div`
   }
 
   & > .body {
-    margin: 0.5rem 0 0.5rem 1rem;
+    margin: 0.5rem 0 0 1rem;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;

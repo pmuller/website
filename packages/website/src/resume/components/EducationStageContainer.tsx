@@ -5,7 +5,6 @@ import { OrganizationContainer } from "./OrganizationContainer";
 export const EducationStageContainer = styled.div`
   display: flex;
   flex-direction: column;
-  margin-bottom: 1rem;
   gap: 0.25rem;
 
   & > .degree {
