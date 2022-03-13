@@ -1,13 +1,15 @@
 import React from "react";
 
 import { EducationStage as Props } from "../types";
+import { Dates } from "./Dates";
+import { EducationStageContainer } from "./EducationStageContainer";
+import { Organization } from "./Organization";
 
 export const EducationStage: React.FC<Props> = (props) => (
-  <div>
-    <div>School: {props.school.name}</div>
-    <div>Start: {props.startDate.toISOString()}</div>
-    <div>End: {props.endDate?.toISOString()}</div>
-    <div>Degree: {props.degree}</div>
-    <div>Description: {props.description}</div>
-  </div>
+  <EducationStageContainer>
+    {props.degree && <div className="degree">{props.degree}</div>}
+    <Organization {...props.school} />
+    <Dates start={props.startDate} end={props.endDate} />
+    <div>{props.description}</div>
+  </EducationStageContainer>
 );
