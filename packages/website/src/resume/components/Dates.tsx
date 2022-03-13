@@ -13,6 +13,7 @@ type Props = {
 export const Dates: React.FC<Props> = ({ start, end }) => (
   <DatesContainer>
     <Icon path={mdiCalendarMonthOutline} size={0.7} />
-    {formatDate(start)} - {formatEndDate(end)}
+    <span className="date">{formatDate(start)}</span> -{" "}
+    <span className="date">{formatEndDate(end)}</span>
   </DatesContainer>
 );
