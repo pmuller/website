@@ -3,19 +3,11 @@ import { styled } from "linaria/react";
 export const ExperienceSubStageContainer = styled.div`
   & > .header {
     display: flex;
+    gap: 0.2rem;
     flex-direction: column;
 
     & > .title {
       font-weight: bold;
-    }
-
-    /* iPhone SE landscape and bigger */
-    @media (min-width: 568px) {
-      flex-direction: row;
-
-      & > .title {
-        flex-grow: 1;
-      }
     }
   }
 
