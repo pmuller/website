@@ -21,5 +21,6 @@ Still on-going.
     degree: "Master of Information Technology",
     startDate: new Date("2005-09-05"),
     endDate: new Date("2006-06-30"),
+    description: "Algorithms, C++, project management, IP networking, security",
   },
 ];
