@@ -18,7 +18,7 @@ Still on-going.
       url: "https://welcome.univ-lorraine.fr/en/",
       location: "Metz, France",
     },
-    degree: "Master in Information Technology",
+    degree: "Master of Information Technology",
     startDate: new Date("2005-09-05"),
     endDate: new Date("2006-06-30"),
   },
