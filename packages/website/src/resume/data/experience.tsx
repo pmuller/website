@@ -131,7 +131,7 @@ export const experience: ExperienceStage[] = [
             </li>
           </ul>
         ),
-        techStack: ["Python", "Django", "Linux"],
+        techStack: ["Python", "Django", "Linux", "MariaDB", "Mesos"],
       },
     ],
   },
