@@ -27,7 +27,7 @@ export const experience: ExperienceStage[] = [
               <ExternalLink href="https://happyteams.events/en/the-diamond-heist">
                 The Diamond Heist
               </ExternalLink>{" "}
-              game
+              real-time multi-player game
             </li>
           </ul>
         ),
@@ -55,8 +55,8 @@ export const experience: ExperienceStage[] = [
               developers)
             </li>
             <li>
-              Design and implementation of the fund's cloud infrastructure on
-              AWS
+              Design and implementation of the research and production cloud
+              infrastructure
             </li>
             <li>Design and implementation of the job scheduling system</li>
           </ul>
@@ -69,6 +69,7 @@ export const experience: ExperienceStage[] = [
           "Puppet",
           "Django",
           "Pandas",
+          "Slurm",
         ],
       },
     ],
@@ -78,14 +79,15 @@ export const experience: ExperienceStage[] = [
       name: "The Box Escape Games",
       location: "Metz, France",
       url: "https://the-box.fr/en/",
-      description: "Award-winning escape room",
+      description: "Award-winning escape rooms",
     },
     stages: [
       {
         startDate: new Date("2015-09-26"),
         endDate: new Date("2021-12-31"),
         title: "Chief Technology Officer, co-founder",
-        description: "Design & implementation of several in-room games",
+        description:
+          "Hardware and software design and implementation of several in-room games",
         techStack: [
           "Linux",
           "Raspberry Pi",
@@ -105,7 +107,7 @@ export const experience: ExperienceStage[] = [
       name: "Criteo",
       location: "Paris, France",
       url: "https://criteo.com",
-      description: "Online advertising",
+      description: "Programmatic online advertising",
     },
     stages: [
       {
@@ -116,7 +118,7 @@ export const experience: ExperienceStage[] = [
           <ul>
             <li>
               Built a software engineering team focused on infrastructure
-              automation software (5 developers)
+              automation and asset management software (5 developers)
             </li>
             <li>
               Design of a Data Center Information Management system (DCIM)
@@ -141,7 +143,9 @@ export const experience: ExperienceStage[] = [
         title: "Software Engineer",
         description: (
           <ul>
-            <li>Development of data management systems</li>
+            <li>
+              Design and development of the research HPC jobs automation system
+            </li>
             <li>Development of the research job management service</li>
             <li>Automation of production jobs management (CICD)</li>
             <li>Refactoring of research code for production</li>
