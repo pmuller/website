@@ -9,6 +9,7 @@ export const Layout = styled.div`
     "header     header"
     "summary    summary"
     "experience experience"
+    "languages  languages"
     "education  education";
 
   /* iPhone SE landscape and bigger */
@@ -16,6 +17,7 @@ export const Layout = styled.div`
     grid-template-areas:
       "header     header"
       "experience summary"
+      "experience languages"
       "experience education"
       "experience .";
   }
