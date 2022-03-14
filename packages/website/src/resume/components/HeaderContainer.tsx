@@ -5,4 +5,5 @@ export const HeaderContainer = styled.div`
   display: flex;
   gap: 1rem;
   align-items: center;
+  flex-wrap: wrap;
 `;
