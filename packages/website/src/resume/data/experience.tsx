@@ -10,6 +10,7 @@ export const experience: ExperienceStage[] = [
       name: "Happy Teams",
       location: "Metz, France",
       url: "https://happyteams.events/en",
+      description: "Remote team building games",
     },
     stages: [
       {
@@ -39,6 +40,8 @@ export const experience: ExperienceStage[] = [
       name: "AXA Investment Managers Chorus",
       location: "Hong Kong",
       url: "https://www.axa-im.com/what-we-do/alternatives#anchor-f45d1552-2096-429e-8bed-3365c32a3dd7",
+      description:
+        "Quantitative and systematic hedge fund, 1+ billion USD under management",
     },
     stages: [
       {
@@ -75,6 +78,7 @@ export const experience: ExperienceStage[] = [
       name: "The Box Escape Games",
       location: "Metz, France",
       url: "https://the-box.fr/en/",
+      description: "Award-winning escape room",
     },
     stages: [
       {
@@ -101,6 +105,7 @@ export const experience: ExperienceStage[] = [
       name: "Criteo",
       location: "Paris, France",
       url: "https://criteo.com",
+      description: "Online advertising",
     },
     stages: [
       {
@@ -127,6 +132,7 @@ export const experience: ExperienceStage[] = [
       name: "Capital Fund Management",
       location: "Paris, France",
       url: "https://www.cfm.fr",
+      description: "Global quantitative and systematic asset manager",
     },
     stages: [
       {
@@ -175,6 +181,7 @@ export const experience: ExperienceStage[] = [
     company: {
       name: "Tapinoma",
       location: "Remote",
+      description: "Mobile apps startup",
     },
     stages: [
       {
@@ -212,6 +219,7 @@ export const experience: ExperienceStage[] = [
       name: "Altran",
       location: "Paris, France",
       url: "https://altran.fr",
+      description: "Engineering consulting firm",
     },
     stages: [
       {
@@ -246,6 +254,7 @@ export const experience: ExperienceStage[] = [
       name: "Kewego",
       location: "Paris, France",
       url: "https://en.wikipedia.org/wiki/Kewego",
+      description: "Video platform provider",
     },
     stages: [
       {
@@ -270,6 +279,7 @@ export const experience: ExperienceStage[] = [
       name: "Juniper Networks",
       location: "Paris, France",
       url: "https://juniper.net",
+      description: "Network & security equipments vendor",
     },
     stages: [
       {
@@ -291,6 +301,7 @@ export const experience: ExperienceStage[] = [
       name: "Waycom",
       location: "Paris, France",
       url: "https://waycom.net",
+      description: "Internet managed services provider",
     },
     stages: [
       {
