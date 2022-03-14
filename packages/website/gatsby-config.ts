@@ -1,5 +1,6 @@
-/* eslint-disable import/no-unused-modules,import/unambiguous */
-module.exports = {
+import type { GatsbyConfig } from "gatsby";
+
+const config: GatsbyConfig = {
   siteMetadata: {
     title: "Philippe Muller's home page",
     author: "Philippe Muller",
@@ -14,3 +15,5 @@ module.exports = {
     "gatsby-transformer-sharp",
   ],
 };
+
+export default config;
