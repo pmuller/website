@@ -9,12 +9,12 @@ export const contactMethods: ContactMethod[] = [
     icon: mdiWeb,
   },
   {
-    label: "pmuller",
+    label: "github.com/pmuller",
     url: "https://github.com/pmuller",
     icon: mdiGithub,
   },
   {
-    label: "muller",
+    label: "linkedin.com/in/muller",
     url: "https://linkedin.com/in/muller",
     icon: mdiLinkedin,
   },
