@@ -1660,6 +1660,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@dword-design/chdir@npm:^2.0.0":
+  version: 2.0.8
+  resolution: "@dword-design/chdir@npm:2.0.8"
+  checksum: 14cc34f48b1a712cd83e0f982d16a3d16e4f8406952a74a1b3c635b4b69c43599e84849675486790a8b6014f56b564c053e37b570b9fd1e9a28d324ffe914ace
+  languageName: node
+  linkType: hard
+
 "@emotion/is-prop-valid@npm:^0.8.8":
   version: 0.8.8
   resolution: "@emotion/is-prop-valid@npm:0.8.8"
@@ -16271,6 +16278,7 @@ __metadata:
     prettier: ^2.5.1
     ts-jest: ^27.1.3
     typescript: ^4.5.5
+    with-local-tmp-dir: ^4.0.11
   bin:
     s3-static-site-uploader: dist/index.js
   languageName: unknown
@@ -17764,6 +17772,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"tmp-promise@npm:^3.0.0":
+  version: 3.0.3
+  resolution: "tmp-promise@npm:3.0.3"
+  dependencies:
+    tmp: ^0.2.0
+  checksum: f854f5307dcee6455927ec3da9398f139897faf715c5c6dcee6d9471ae85136983ea06662eba2edf2533bdcb0fca66d16648e79e14381e30c7fb20be9c1aa62c
+  languageName: node
+  linkType: hard
+
 "tmp@npm:^0.0.33":
   version: 0.0.33
   resolution: "tmp@npm:0.0.33"
@@ -17773,7 +17790,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tmp@npm:^0.2.1":
+"tmp@npm:^0.2.0, tmp@npm:^0.2.1":
   version: 0.2.1
   resolution: "tmp@npm:0.2.1"
   dependencies:
@@ -18997,6 +19014,16 @@ __metadata:
     triple-beam: ^1.3.0
     winston-transport: ^4.3.0
   checksum: 5265d0a1ed53bedc0e7bbcba17c33aefb2b5486cd37586a386eac1ac584380062f7120f298696aba3b9b4b2a1f4ee760128a8631bdf749c3253bb7b1aaeb587d
+  languageName: node
+  linkType: hard
+
+"with-local-tmp-dir@npm:^4.0.11":
+  version: 4.0.11
+  resolution: "with-local-tmp-dir@npm:4.0.11"
+  dependencies:
+    "@dword-design/chdir": ^2.0.0
+    tmp-promise: ^3.0.0
+  checksum: 597abf618baec03e6fd97c9270c6c1b904d521c78ebbc064a1c780b1ff31ef3991e6662881e8945426df48d1f42f1b8b75a90c2024bff10c280f4fae74c083bb
   languageName: node
   linkType: hard
 

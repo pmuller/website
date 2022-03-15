@@ -4,7 +4,7 @@ import { resolve } from "path";
 
 export const listFilesRecursively = async (
   path: string,
-  logger: Logger
+  logger?: Logger
 ): Promise<string[]> =>
   (
     await Promise.all(
@@ -19,7 +19,7 @@ export const listFilesRecursively = async (
 
         if (pathStats.isFile()) return [fullPath];
 
-        logger.warn(
+        logger?.warn(
           `Ignoring ${fullPath} because it is not a directory nor a regular file`
         );
         return [];
