@@ -10,7 +10,7 @@
     "check:prettier": "prettier --check .",
     "check": "yarn check:prettier && yarn check:eslint",
     "clean": "tsc --build --clean",
-    "test": "echo No tests"
+    "test": "jest"
   },
   "devDependencies": {
     "@types/eslint": "^8.4.1",
