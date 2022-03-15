@@ -14761,6 +14761,8 @@ __metadata:
     eslint-plugin-sonarjs: ^0.12.0
     prettier: ^2.5.1
     typescript: ^4.5.5
+  bin:
+    s3-static-site-uploader: dist/index.js
   languageName: unknown
   linkType: soft
 

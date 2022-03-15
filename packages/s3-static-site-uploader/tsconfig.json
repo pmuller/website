@@ -1,10 +1,9 @@
 {
   "extends": "../../tsconfig.json",
+  "include": ["./src"],
   "compilerOptions": {
     "skipLibCheck": true,
-    "noEmit": true,
-    "jsx": "preserve",
-    "lib": ["dom", "dom.iterable", "esnext"]
-  },
-  "include": ["./src/**/*"]
+    "rootDir": "./src",
+    "outDir": "./dist"
+  }
 }
