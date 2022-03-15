@@ -1,5 +1,6 @@
 /* eslint-disable import/no-unused-modules */
 import { listFilesRecursively } from "./filesystem";
+import { prepareMetadata } from "./metadata";
 import { program } from "@caporal/core";
 
 program
@@ -16,6 +17,8 @@ program
     logger.info(`options: ${JSON.stringify(options)}`);
     const files = await listFilesRecursively(args.localPath as string, logger);
     logger.info(`files: ${JSON.stringify(files)}`);
+    const metadata = prepareMetadata(files);
+    logger.info(`metadata: ${JSON.stringify(metadata)}`);
   });
 
 program.run();
