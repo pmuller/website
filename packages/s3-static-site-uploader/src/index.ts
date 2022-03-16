@@ -16,13 +16,10 @@ program
   .action(async ({ logger, args, options }) => {
     logger.info(`args: ${JSON.stringify(args)}`);
     logger.info(`options: ${JSON.stringify(options)}`);
-    const localFiles = await listFilesRecursively(
-      args.localPath as string,
-      logger
+    const localFiles = prepareMetadata(
+      await listFilesRecursively(args.localPath as string, logger)
     );
-    logger.info(`files: ${JSON.stringify(localFiles)}`);
-    const metadata = prepareMetadata(localFiles);
-    logger.info(`metadata: ${JSON.stringify(metadata)}`);
+    logger.info(`localFiles: ${JSON.stringify(localFiles)}`);
     const remoteFiles = await listObjects(args.s3BucketId as string);
     logger.info(`remoteFiles: ${JSON.stringify(remoteFiles)}`);
   });
