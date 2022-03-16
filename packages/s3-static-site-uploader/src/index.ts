@@ -21,9 +21,13 @@ program
       prepareMetadata(await listFilesRecursively(prefix, logger)),
       prefix
     );
-    logger.info(`localFiles: ${JSON.stringify(localFiles)}`);
+    logger.info(
+      `${localFiles.length} localFiles: ${JSON.stringify(localFiles)}`
+    );
     const remoteFiles = await listObjects(args.s3BucketId as string);
-    logger.info(`remoteFiles: ${JSON.stringify(remoteFiles)}`);
+    logger.info(
+      `${remoteFiles.length} remoteFiles: ${JSON.stringify(remoteFiles)}`
+    );
   });
 
 program.run();
