@@ -1,7 +1,7 @@
 import { LocalFileMetadata } from "../types";
 import { Logger } from "@caporal/core";
 import { readdir, stat } from "fs/promises";
-import { resolve } from "path";
+import { join } from "path";
 
 export const listFilesRecursively = async (
   path: string,
@@ -12,7 +12,7 @@ export const listFilesRecursively = async (
       (
         await readdir(path)
       ).map(async (name) => {
-        const fullPath = resolve(path, name);
+        const fullPath = join(path, name);
         const pathStats = await stat(fullPath);
 
         if (pathStats.isDirectory())
