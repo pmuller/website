@@ -1,5 +1,5 @@
 /* eslint-disable import/no-unused-modules */
-import { listFilesRecursively } from "./filesystem";
+import { listFilesRecursively } from "./listFilesRecursively";
 import { open, mkdir } from "fs/promises";
 import { resolve } from "path";
 import { cwd } from "process";
@@ -12,9 +12,14 @@ test("empty", () =>
 
 test("single", () =>
   withLocalTmpDir(async () => {
-    await (await open("foo", "w")).close();
+    const fileHandle = await open("foo", "w");
+    await fileHandle.write("test");
+    await fileHandle.close();
     expect(await listFilesRecursively(".")).toStrictEqual([
-      resolve(cwd(), "foo"),
+      {
+        path: resolve(cwd(), "foo"),
+        size: 4,
+      },
     ]);
   }));
 
@@ -25,9 +30,9 @@ test("flat", () =>
     await (await open("baz", "w")).close();
     const result = await listFilesRecursively(".");
     expect(result).toStrictEqual([
-      resolve(cwd(), "bar"),
-      resolve(cwd(), "baz"),
-      resolve(cwd(), "foo"),
+      { path: resolve(cwd(), "bar"), size: 0 },
+      { path: resolve(cwd(), "baz"), size: 0 },
+      { path: resolve(cwd(), "foo"), size: 0 },
     ]);
   }));
 
@@ -41,10 +46,10 @@ test("recursive", () =>
     await (await open(resolve(cwd(), "dir2/bar"), "w")).close();
     const result = await listFilesRecursively(".");
     expect(result).toStrictEqual([
-      resolve(cwd(), "dir1/bar"),
-      resolve(cwd(), "dir1/foo"),
-      resolve(cwd(), "dir2/bar"),
-      resolve(cwd(), "dir2/baz"),
+      { path: resolve(cwd(), "dir1/bar"), size: 0 },
+      { path: resolve(cwd(), "dir1/foo"), size: 0 },
+      { path: resolve(cwd(), "dir2/bar"), size: 0 },
+      { path: resolve(cwd(), "dir2/baz"), size: 0 },
     ]);
   }));
 
@@ -55,5 +60,7 @@ test("deep", () =>
     await mkdir(resolve(cwd(), "foo/bar/baz"));
     await (await open(resolve(cwd(), "foo/bar/baz/file"), "w")).close();
     const result = await listFilesRecursively(".");
-    expect(result).toStrictEqual([resolve(cwd(), "foo/bar/baz/file")]);
+    expect(result).toStrictEqual([
+      { path: resolve(cwd(), "foo/bar/baz/file"), size: 0 },
+    ]);
   }));

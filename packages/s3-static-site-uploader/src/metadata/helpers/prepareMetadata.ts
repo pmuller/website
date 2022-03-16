@@ -1,12 +1,13 @@
 import { defaultConfiguration, Configuration } from "../../config";
+import { LocalFileMetadata } from "../../filesystem";
 import { FileMetadata } from "../types";
 import minimatch from "minimatch";
 
 export const prepareMetadata = (
-  files: string[],
+  files: LocalFileMetadata[],
   configuration: Configuration = defaultConfiguration
 ): FileMetadata[] =>
-  files.map((path) => {
+  files.map(({ path, size }) => {
     const contentTypeMatches = Object.entries(
       configuration.contentTypes
     ).filter(([pattern]) => minimatch(path, pattern));
@@ -21,5 +22,5 @@ export const prepareMetadata = (
       throw new Error(`More than 1 cache control pattern matches ${path}`);
     const cacheControl =
       cacheControlMatches[0]?.[1] ?? configuration.defaultCacheControlPolicy;
-    return { contentType, cacheControl, path };
+    return { contentType, cacheControl, path, size };
   });

@@ -1,5 +1,6 @@
-export type FileMetadata = {
-  path: string;
+import { LocalFileMetadata } from "../../filesystem";
+
+export type FileMetadata = LocalFileMetadata & {
   contentType: string;
   cacheControl: string;
 };
