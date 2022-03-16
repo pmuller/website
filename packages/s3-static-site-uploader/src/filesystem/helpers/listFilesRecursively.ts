@@ -4,25 +4,23 @@ import { readdir, stat } from "fs/promises";
 import { join } from "path";
 
 export const listFilesRecursively = async (
-  path: string,
+  prefix: string,
   logger?: Logger
 ): Promise<LocalFileMetadata[]> =>
   (
     await Promise.all(
       (
-        await readdir(path)
+        await readdir(prefix)
       ).map(async (name) => {
-        const fullPath = join(path, name);
-        const pathStats = await stat(fullPath);
+        const path = join(prefix, name);
+        const stats = await stat(path);
 
-        if (pathStats.isDirectory())
-          return listFilesRecursively(fullPath, logger);
+        if (stats.isDirectory()) return listFilesRecursively(path, logger);
 
-        if (pathStats.isFile())
-          return [{ path: fullPath, size: pathStats.size }];
+        if (stats.isFile()) return [{ path, size: stats.size }];
 
         logger?.warn(
-          `Ignoring ${fullPath} because it is not a directory nor a regular file`
+          `Ignoring ${path} because it is not a directory nor a regular file`
         );
         return [];
       })
