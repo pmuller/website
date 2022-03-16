@@ -1,2 +1,2 @@
-export { listFilesRecursively } from "./helpers";
+export { listFilesRecursively, stripMetadataPathPrefixes } from "./helpers";
 export type { LocalFileMetadata } from "./types";

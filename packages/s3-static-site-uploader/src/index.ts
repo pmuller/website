@@ -1,5 +1,5 @@
 /* eslint-disable import/no-unused-modules */
-import { listFilesRecursively } from "./filesystem";
+import { listFilesRecursively, stripMetadataPathPrefixes } from "./filesystem";
 import { prepareMetadata } from "./metadata";
 import { listObjects } from "./s3";
 import { program } from "@caporal/core";
@@ -16,8 +16,10 @@ program
   .action(async ({ logger, args, options }) => {
     logger.info(`args: ${JSON.stringify(args)}`);
     logger.info(`options: ${JSON.stringify(options)}`);
-    const localFiles = prepareMetadata(
-      await listFilesRecursively(args.localPath as string, logger)
+    const prefix = args.localPath as string;
+    const localFiles = stripMetadataPathPrefixes(
+      prepareMetadata(await listFilesRecursively(prefix, logger)),
+      prefix
     );
     logger.info(`localFiles: ${JSON.stringify(localFiles)}`);
     const remoteFiles = await listObjects(args.s3BucketId as string);
