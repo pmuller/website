@@ -5,7 +5,7 @@ import withLocalTmpDir from "with-local-tmp-dir";
 
 test("empty", () =>
   withLocalTmpDir(() =>
-    listFilesRecursively(".").then((result) => expect(result).toStrictEqual([]))
+    listFilesRecursively(".").then((result) => expect(result).toStrictEqual({}))
   ));
 
 test("single", () =>
@@ -13,12 +13,7 @@ test("single", () =>
     const fileHandle = await open("foo", "w");
     await fileHandle.write("test");
     await fileHandle.close();
-    expect(await listFilesRecursively(".")).toStrictEqual([
-      {
-        path: "foo",
-        size: 4,
-      },
-    ]);
+    expect(await listFilesRecursively(".")).toStrictEqual({ foo: { size: 4 } });
   }));
 
 test("flat", () =>
@@ -27,11 +22,11 @@ test("flat", () =>
     await (await open("bar", "w")).close();
     await (await open("baz", "w")).close();
     const result = await listFilesRecursively(".");
-    expect(result).toStrictEqual([
-      { path: "bar", size: 0 },
-      { path: "baz", size: 0 },
-      { path: "foo", size: 0 },
-    ]);
+    expect(result).toStrictEqual({
+      bar: { size: 0 },
+      baz: { size: 0 },
+      foo: { size: 0 },
+    });
   }));
 
 test("recursive", () =>
@@ -43,12 +38,12 @@ test("recursive", () =>
     await (await open("dir2/baz", "w")).close();
     await (await open("dir2/bar", "w")).close();
     const result = await listFilesRecursively(".");
-    expect(result).toStrictEqual([
-      { path: "dir1/bar", size: 0 },
-      { path: "dir1/foo", size: 0 },
-      { path: "dir2/bar", size: 0 },
-      { path: "dir2/baz", size: 0 },
-    ]);
+    expect(result).toStrictEqual({
+      "dir1/bar": { size: 0 },
+      "dir1/foo": { size: 0 },
+      "dir2/bar": { size: 0 },
+      "dir2/baz": { size: 0 },
+    });
   }));
 
 test("deep", () =>
@@ -58,10 +53,7 @@ test("deep", () =>
     await mkdir("foo/bar/baz");
     await (await open("foo/bar/baz/file", "w")).close();
     const result = await listFilesRecursively(".");
-    expect(result).toStrictEqual([
-      {
-        path: "foo/bar/baz/file",
-        size: 0,
-      },
-    ]);
+    expect(result).toStrictEqual({
+      "foo/bar/baz/file": { size: 0 },
+    });
   }));

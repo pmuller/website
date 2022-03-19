@@ -1,11 +1,14 @@
-import { LocalFileMetadata } from "../types";
+import { LocalFileCollection } from "../types";
 import { stripPathPrefix } from "./stripPathPrefix";
 
 export const stripMetadataPathPrefixes = (
-  metadata: LocalFileMetadata[],
+  files: LocalFileCollection,
   prefix: string
-): LocalFileMetadata[] =>
-  metadata.map(({ path, ...data }) => ({
-    path: stripPathPrefix(path, prefix),
-    ...data,
-  }));
+): LocalFileCollection =>
+  Object.entries(files).reduce(
+    (files, [path, data]) => ({
+      ...files,
+      [stripPathPrefix(path, prefix)]: data,
+    }),
+    {} as LocalFileCollection
+  );

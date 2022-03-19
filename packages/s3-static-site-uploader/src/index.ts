@@ -22,11 +22,19 @@ program
       prefix
     );
     logger.info(
-      `${localFiles.length} localFiles: ${JSON.stringify(localFiles)}`
+      `${Object.values(localFiles).length} localFiles: ${JSON.stringify(
+        localFiles,
+        null,
+        2
+      )}`
     );
     const remoteFiles = await listObjects(args.s3BucketId as string);
     logger.info(
-      `${remoteFiles.length} remoteFiles: ${JSON.stringify(remoteFiles)}`
+      `${Object.values(remoteFiles).length} remoteFiles: ${JSON.stringify(
+        remoteFiles,
+        null,
+        2
+      )}`
     );
   });
 

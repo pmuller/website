@@ -1,4 +1,4 @@
-import { LocalFileMetadata } from "../types";
+import { LocalFileCollection } from "../types";
 import { Logger } from "@caporal/core";
 import { readdir, stat } from "fs/promises";
 import { join } from "path";
@@ -6,7 +6,7 @@ import { join } from "path";
 export const listFilesRecursively = async (
   prefix: string,
   logger?: Logger
-): Promise<LocalFileMetadata[]> =>
+): Promise<LocalFileCollection> =>
   (
     await Promise.all(
       (
@@ -14,15 +14,9 @@ export const listFilesRecursively = async (
       ).map(async (name) => {
         const path = join(prefix, name);
         const stats = await stat(path);
-
         if (stats.isDirectory()) return listFilesRecursively(path, logger);
-
-        if (stats.isFile()) return [{ path, size: stats.size }];
-
-        logger?.warn(
-          `Ignoring ${path} because it is not a directory nor a regular file`
-        );
-        return [];
+        if (stats.isFile()) return { [path]: { size: stats.size } };
+        throw new Error(`${path} is not a directory nor a regular file`);
       })
     )
-  ).flat();
+  ).reduce((previous, current) => ({ ...previous, ...current }), {});
