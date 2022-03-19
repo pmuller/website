@@ -3,6 +3,7 @@ import { listFilesRecursively, stripMetadataPathPrefixes } from "./filesystem";
 import { prepareMetadata } from "./metadata";
 import { listObjects } from "./s3";
 import { program } from "@caporal/core";
+import { detailedDiff } from "deep-object-diff";
 
 program
   .argument("<local_path>", "Local path of the static website build", {
@@ -21,21 +22,9 @@ program
       prepareMetadata(await listFilesRecursively(prefix, logger)),
       prefix
     );
-    logger.info(
-      `${Object.values(localFiles).length} localFiles: ${JSON.stringify(
-        localFiles,
-        null,
-        2
-      )}`
-    );
     const remoteFiles = await listObjects(args.s3BucketId as string);
-    logger.info(
-      `${Object.values(remoteFiles).length} remoteFiles: ${JSON.stringify(
-        remoteFiles,
-        null,
-        2
-      )}`
-    );
+    const filesDiff = detailedDiff(remoteFiles, localFiles);
+    logger.info(`Diff: ${JSON.stringify(filesDiff, null, 2)}`);
   });
 
 program.run();

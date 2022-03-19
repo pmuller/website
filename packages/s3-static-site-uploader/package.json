@@ -31,6 +31,7 @@
   "dependencies": {
     "@aws-sdk/client-s3": "^3.54.1",
     "@caporal/core": "^2.0.2",
+    "deep-object-diff": "^1.1.7",
     "minimatch": "^5.0.1"
   }
 }
