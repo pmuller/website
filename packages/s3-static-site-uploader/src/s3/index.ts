@@ -1,1 +1,1 @@
-export { listObjects } from "./helpers";
+export { synchronize } from "./helpers";

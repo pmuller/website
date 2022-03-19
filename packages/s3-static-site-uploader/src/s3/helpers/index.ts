@@ -1,1 +1,1 @@
-export { listObjects } from "./listObjects";
+export { synchronize } from "./synchronize";
