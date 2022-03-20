@@ -23,9 +23,15 @@ program
       args.s3BucketId as string,
       !!options.dry,
       logger
-    ).then(() =>
-      !options.dry && options.cloudfrontDistributionId
-        ? createInvalidation(options.cloudfrontDistributionId as string, logger)
+    ).then((modifiedFiles) =>
+      !options.dry &&
+      options.cloudfrontDistributionId &&
+      modifiedFiles.length > 0
+        ? createInvalidation(
+            options.cloudfrontDistributionId as string,
+            modifiedFiles,
+            logger
+          )
         : undefined
     )
   );

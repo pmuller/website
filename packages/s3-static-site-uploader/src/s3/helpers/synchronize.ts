@@ -16,7 +16,7 @@ export const synchronize = async (
   bucketId: string,
   dry: boolean,
   logger?: Logger
-): Promise<void> => {
+): Promise<string[]> => {
   logger?.info(
     `Synchronizing local path ${localPath} with S3 bucket ${bucketId}`
   );
@@ -60,4 +60,11 @@ export const synchronize = async (
     );
 
   if (!dry) logger?.info("Synchronization complete");
+
+  // Return list of modified files
+  return [
+    ...Object.keys(addedFiles),
+    ...Object.keys(updatedFiles),
+    ...Object.keys(deletedFiles),
+  ];
 };
