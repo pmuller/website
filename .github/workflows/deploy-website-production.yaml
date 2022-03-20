@@ -12,7 +12,7 @@ on:
 
 jobs:
   deploy:
-    uses: pmuller/website/.github/workflows/deploy-website.yaml@main
+    uses: ./.github/workflows/deploy-website.yaml
     with:
       aws-region: eu-west-1
       content-bucket-id: website-content-47cf131

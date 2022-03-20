@@ -36,23 +36,30 @@ jobs:
       - run: yarn test
       - uses: actions/upload-artifact@v3
         with:
-          name: website-${{ github.ref_name }}
+          name: website-${{ github.sha }}
           path: packages/website/public/
           if-no-files-found: error
 
   deploy:
     needs: build
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./packages/s3-static-site-uploader
     steps:
+      - uses: actions/checkout@v2
       - uses: actions/download-artifact@v3
         with:
-          name: website-${{ github.ref_name }}
+          name: website-${{ github.sha }}
+          path: packages/s3-static-site-uploader/website-build
       - uses: aws-actions/configure-aws-credentials@v1
         with:
           aws-access-key-id: ${{ secrets.aws-access-key-id }}
           aws-secret-access-key: ${{ secrets.aws-secret-access-key }}
           aws-region: ${{ inputs.aws-region }}
-      - name: Upload to S3
-        run: aws s3 sync --no-progress --delete . s3://${{ inputs.content-bucket-id }}
-      - name: Invalidate Cloudfront distribution cache
-        run: aws cloudfront create-invalidation --distribution-id ${{ inputs.cloudfront-distribution-id }} --paths "/*"
+      - name: Setup environment
+        run: |
+          yarn workspaces focus
+          yarn build
+      - name: Deployment
+        run: yarn s3-static-site-uploader ./website-build ${{ inputs.content-bucket-id }} --cloudfront-distribution-id ${{ inputs.cloudfront-distribution-id }}
