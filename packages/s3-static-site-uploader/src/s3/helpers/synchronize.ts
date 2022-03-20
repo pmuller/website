@@ -21,9 +21,11 @@ export const synchronize = async (
     `Synchronizing local path ${localPath} with S3 bucket ${bucketId}`
   );
   const s3 = new S3Client({});
-  const localFiles = stripMetadataPathPrefixes(
-    prepareMetadata(await listFilesRecursively(localPath, logger)),
-    localPath
+  const localFiles = prepareMetadata(
+    stripMetadataPathPrefixes(
+      await listFilesRecursively(localPath, logger),
+      localPath
+    )
   );
   const remoteFiles = await listObjects(bucketId, s3);
   const addedFiles = addedDiff(remoteFiles, localFiles);
