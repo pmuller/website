@@ -23,6 +23,7 @@ export const defaultConfiguration: Configuration = {
     "**/*.pdf": "application/pdf",
     "**/*.tif": "image/tiff",
     "**/*.wasm": "application/wasm",
+    "**/*.js.map": "application/json",
   },
   defaultContentType: "application/octet-stream",
   cacheControl: {
