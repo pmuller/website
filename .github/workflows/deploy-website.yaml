@@ -43,6 +43,9 @@ jobs:
   deploy:
     needs: build
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./packages/s3-static-site-uploader
     steps:
       - uses: actions/checkout@v2
       - uses: actions/download-artifact@v3
@@ -58,7 +61,5 @@ jobs:
         run: |
           yarn workspaces focus
           yarn build
-        working-directory: packages/s3-static-site-uploader
       - name: Deployment
         run: yarn s3-static-site-uploader ./website-build s3://${{ inputs.content-bucket-id }} --cloudfront-distribution-id ${{ inputs.cloudfront-distribution-id }}
-        working-directory: packages/s3-static-site-uploader
