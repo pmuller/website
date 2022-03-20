@@ -1,7 +1,8 @@
 /* eslint-disable import/no-unused-modules */
+import { program } from "@caporal/core";
+
 import { createInvalidation } from "./cloudfront";
 import { synchronize } from "./s3";
-import { program } from "@caporal/core";
 
 program
   .argument("<local_path>", "Local path of the static website build", {

@@ -1,9 +1,10 @@
-import { S3ObjectCollection } from "../types";
 import {
-  S3Client,
-  ListObjectsV2Command,
   HeadObjectCommand,
+  ListObjectsV2Command,
+  S3Client,
 } from "@aws-sdk/client-s3";
+
+import { S3ObjectCollection } from "../types";
 
 export const listObjects = async (
   bucketId: string,

@@ -1,7 +1,8 @@
-import { defaultConfiguration, Configuration } from "../../config";
+import minimatch from "minimatch";
+
+import { Configuration, defaultConfiguration } from "../../config";
 import { LocalFileCollection } from "../../filesystem";
 import { FileCollection } from "../types";
-import minimatch from "minimatch";
 
 export const prepareMetadata = (
   files: LocalFileCollection,

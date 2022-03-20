@@ -1,3 +1,7 @@
+import { S3Client } from "@aws-sdk/client-s3";
+import { Logger } from "@caporal/core";
+import { addedDiff, deletedDiff, updatedDiff } from "deep-object-diff";
+
 import {
   listFilesRecursively,
   stripMetadataPathPrefixes,
@@ -6,9 +10,6 @@ import { prepareMetadata } from "../../metadata";
 import { listObjects } from "./listObjects";
 import { remove } from "./remove";
 import { upload } from "./upload";
-import { S3Client } from "@aws-sdk/client-s3";
-import { Logger } from "@caporal/core";
-import { addedDiff, deletedDiff, updatedDiff } from "deep-object-diff";
 
 export const synchronize = async (
   localPath: string,

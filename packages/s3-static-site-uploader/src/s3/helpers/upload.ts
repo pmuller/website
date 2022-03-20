@@ -1,7 +1,8 @@
-import { FileMetadata } from "../../metadata";
-import { S3Client, PutObjectCommand } from "@aws-sdk/client-s3";
+import { PutObjectCommand, S3Client } from "@aws-sdk/client-s3";
 import { Logger } from "@caporal/core";
 import { readFile } from "fs/promises";
+
+import { FileMetadata } from "../../metadata";
 
 export const upload = async (
   prefix: string,

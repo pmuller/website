@@ -1,7 +1,8 @@
 /* eslint-disable import/no-unused-modules */
-import { listFilesRecursively } from "./listFilesRecursively";
-import { open, mkdir } from "fs/promises";
+import { mkdir, open } from "fs/promises";
 import withLocalTmpDir from "with-local-tmp-dir";
+
+import { listFilesRecursively } from "./listFilesRecursively";
 
 test("empty", () =>
   withLocalTmpDir(() =>

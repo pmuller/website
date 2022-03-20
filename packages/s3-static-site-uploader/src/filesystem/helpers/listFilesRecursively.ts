@@ -1,7 +1,8 @@
-import { LocalFileCollection } from "../types";
 import { Logger } from "@caporal/core";
 import { readdir, stat } from "fs/promises";
 import { join } from "path";
+
+import { LocalFileCollection } from "../types";
 
 export const listFilesRecursively = async (
   prefix: string,
