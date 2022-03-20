@@ -9,6 +9,7 @@ on:
       - .github/workflows/deploy-website-staging.yaml
       - .github/workflows/deploy-website.yaml
       - packages/website/**
+      - packages/s3-static-site-uploader/**
       - yarn.lock
 
 jobs:
