@@ -1,0 +1,17 @@
+name: Build s3-static-site-uploader
+
+on:
+  push:
+    branches-ignore:
+      - main
+      - develop
+    paths:
+      - .github/workflows/build-s3-static-site-uploader.yaml
+      - packages/s3-static-site-uploader/**
+      - yarn.lock
+
+jobs:
+  build:
+    uses: pmuller/website/.github/workflows/build.yaml@develop
+    with:
+      workDir: ./packages/s3-static-site-uploader
