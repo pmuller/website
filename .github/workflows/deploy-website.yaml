@@ -61,8 +61,5 @@ jobs:
         run: |
           yarn workspaces focus
           yarn build
-      - run: |
-          ls -l
-          find ./website-build -type f
       - name: Deployment
         run: yarn s3-static-site-uploader ./website-build ${{ inputs.content-bucket-id }} --cloudfront-distribution-id ${{ inputs.cloudfront-distribution-id }}
