@@ -1,14 +1,15 @@
-import { LocalFileCollection } from "../types";
 import { stripPathPrefix } from "./stripPathPrefix";
 
-export const stripMetadataPathPrefixes = (
-  files: LocalFileCollection,
+export const stripMetadataPathPrefixes = <
+  TCollection extends Record<string, unknown>
+>(
+  files: TCollection,
   prefix: string
-): LocalFileCollection =>
+): TCollection =>
   Object.entries(files).reduce(
     (files, [path, data]) => ({
       ...files,
       [stripPathPrefix(path, prefix)]: data,
     }),
-    {} as LocalFileCollection
+    {} as TCollection
   );

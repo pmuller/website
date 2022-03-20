@@ -43,9 +43,11 @@ export const synchronize = async (
   if (dry) logger?.info(`Updated: ${JSON.stringify(updatedFiles, null, 2)}`);
   else
     await Promise.all(
-      Object.entries(updatedFiles).map(([path, data]) =>
-        upload(localPath, bucketId, path, data, logger, s3)
-      )
+      Object.keys(updatedFiles).map((path) => {
+        const metadata = localFiles[path];
+        if (!metadata) throw new Error(`Metadata not found: ${path}`);
+        return upload(localPath, bucketId, path, metadata, logger, s3);
+      })
     );
 
   logger?.info("Deleting removed objects");
