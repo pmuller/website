@@ -1,4 +1,4 @@
-// eslint-disable-next-line no-undef
+// eslint-disable-next-line no-undef,import/no-unused-modules,import/unambiguous
 module.exports = {
   preset: "ts-jest",
   testEnvironment: "node",
