@@ -36,7 +36,7 @@ jobs:
       - run: yarn test
       - uses: actions/upload-artifact@v3
         with:
-          name: website-${{ github.ref_name }}
+          name: website-${{ github.sha }}
           path: packages/website/public/
           if-no-files-found: error
 
@@ -50,7 +50,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/download-artifact@v3
         with:
-          name: website-${{ github.ref_name }}
+          name: website-${{ github.sha }}
           path: packages/s3-static-site-uploader/website-build
       - uses: aws-actions/configure-aws-credentials@v1
         with:
