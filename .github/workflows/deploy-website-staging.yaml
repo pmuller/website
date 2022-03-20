@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - develop
+      - feature/s3-static-site-upload
     paths:
       - .github/workflows/deploy-website-staging.yaml
       - .github/workflows/deploy-website.yaml
