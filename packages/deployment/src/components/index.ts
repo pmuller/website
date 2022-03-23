@@ -1,3 +1,3 @@
 export { ContentBucket } from "./ContentBucket";
 export { GithubDeploymentApiKey } from "./GithubDeploymentApiKey";
-export { NormalizeUriLambdaEdgeFunction } from "./NormalizeUriLambdaEdgeFunction";
+export { WebsiteDistribution } from "./WebsiteDistribution";
