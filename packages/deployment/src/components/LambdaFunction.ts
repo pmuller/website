@@ -26,7 +26,8 @@ export class LambdaFunction extends ComponentResource {
     this.fullName = `${getProject()}-${getStack()}-${name}`;
     this.logGroupArn = this.deployCloudwatchLogGroup().arn;
     this.roleArn = this.deployRole().arn;
-    this.functionArn = this.deployFunction(args).arn;
+    const lambdaFunction = this.deployFunction(args);
+    this.functionArn = interpolate`${lambdaFunction.arn}:${lambdaFunction.version}`;
     this.registerOutputs();
   }
 
@@ -97,7 +98,7 @@ export class LambdaFunction extends ComponentResource {
   private deployFunction({ ...inputs }: LambdaFunctionInputs) {
     return new lambda.Function(
       this.name,
-      { ...inputs, role: this.roleArn, name: this.fullName },
+      { ...inputs, role: this.roleArn, name: this.fullName, publish: true },
       { parent: this }
     );
   }

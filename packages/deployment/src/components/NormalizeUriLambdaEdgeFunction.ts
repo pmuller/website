@@ -1,11 +1,9 @@
+import { LambdaFunctionInputs } from "../types";
 import { LambdaEdgeFunction } from "./LambdaEdgeFunction";
 import { lambda } from "@pulumi/aws";
 import { asset, ComponentResourceOptions } from "@pulumi/pulumi";
 
-type Inputs = Omit<
-  lambda.FunctionArgs,
-  "role" | "name" | "code" | "handler" | "runtime"
->;
+type Inputs = Omit<LambdaFunctionInputs, "code" | "handler" | "runtime">;
 
 export class NormalizeUriLambdaEdgeFunction extends LambdaEdgeFunction {
   constructor(name?: string, args?: Inputs, opts?: ComponentResourceOptions) {
