@@ -1,15 +1,18 @@
 import { LambdaFunctionInputs } from "../types";
 import { LambdaFunction } from "./LambdaFunction";
-import { lambda, iam } from "@pulumi/aws";
+import { lambda, iam, Provider } from "@pulumi/aws";
 import { ComponentResourceOptions } from "@pulumi/pulumi";
 
 export class LambdaEdgeFunction extends LambdaFunction {
   constructor(
     name: string,
     args: LambdaFunctionInputs,
-    opts?: ComponentResourceOptions
+    opts?: Omit<ComponentResourceOptions, "provider">
   ) {
-    super(name, args, opts);
+    super(name, args, {
+      ...opts,
+      provider: new Provider("us-east-1", { region: "us-east-1" }),
+    });
     // Allow Cloudfront to invoke the Lambda function
     new lambda.Permission(
       `lambda-edge-${this.name}`,
