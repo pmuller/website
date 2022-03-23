@@ -7593,7 +7593,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cloudfront-normalize-uri@workspace:packages/cloudfront-normalize-uri":
+"cloudfront-normalize-uri@workspace:^, cloudfront-normalize-uri@workspace:packages/cloudfront-normalize-uri":
   version: 0.0.0-use.local
   resolution: "cloudfront-normalize-uri@workspace:packages/cloudfront-normalize-uri"
   dependencies:
@@ -20380,6 +20380,7 @@ __metadata:
     "@types/node": ^16
     "@typescript-eslint/eslint-plugin": ^5.12.1
     "@typescript-eslint/parser": ^5.12.1
+    cloudfront-normalize-uri: "workspace:^"
     eslint: ^8.9.0
     eslint-config-typescript: "workspace:^"
     eslint-plugin-import: ^2.25.4

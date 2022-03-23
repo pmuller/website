@@ -1,4 +1,8 @@
-import { ContentBucket, GithubDeploymentApiKey } from "./components";
+import {
+  ContentBucket,
+  GithubDeploymentApiKey,
+  NormalizeUriLambdaEdgeFunction,
+} from "./components";
 import { repositoryName } from "./git";
 import { deployCloudfrontDistribution } from "./helpers";
 import { cloudfront, s3 } from "@pulumi/aws";
@@ -15,6 +19,7 @@ const cloudfrontDistribution = deployCloudfrontDistribution(
   originAccessIdentity.cloudfrontAccessIdentityPath,
   logsBucket.bucketDomainName
 );
+new NormalizeUriLambdaEdgeFunction();
 
 export const cloudfrontDistributionDomainName =
   cloudfrontDistribution.domainName;
