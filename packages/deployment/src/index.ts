@@ -1,6 +1,9 @@
-import { ContentBucket, GithubDeploymentApiKey } from "./components";
+import {
+  ContentBucket,
+  GithubDeploymentApiKey,
+  WebsiteDistribution,
+} from "./components";
 import { repositoryName } from "./git";
-import { deployCloudfrontDistribution } from "./helpers";
 import { cloudfront, s3 } from "@pulumi/aws";
 
 const originAccessIdentity = new cloudfront.OriginAccessIdentity("website");
@@ -9,12 +12,13 @@ const contentBucket = new ContentBucket("website", {
   logsBucketId: logsBucket.id,
   originAccessIdentityArn: originAccessIdentity.iamArn,
 });
-const cloudfrontDistribution = deployCloudfrontDistribution(
-  contentBucket.id,
-  contentBucket.regionalDomainName,
-  originAccessIdentity.cloudfrontAccessIdentityPath,
-  logsBucket.bucketDomainName
-);
+const cloudfrontDistribution = new WebsiteDistribution("website", {
+  contentBucketId: contentBucket.id,
+  contentBucketRegionalDomainName: contentBucket.regionalDomainName,
+  originAccessIdentityCloudfrontPath:
+    originAccessIdentity.cloudfrontAccessIdentityPath,
+  logsBucketDomainName: logsBucket.bucketDomainName,
+});
 
 export const cloudfrontDistributionDomainName =
   cloudfrontDistribution.domainName;
