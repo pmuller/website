@@ -1,34 +1,11 @@
-import { graphql, useStaticQuery } from "gatsby";
 import React from "react";
 
-import { ContactMethod as ContactMethodType } from "../types";
+import { useContactMethods } from "../../contact";
 import { ContactContainer } from "./ContactContainer";
 import { ContactMethod } from "./ContactMethod";
 
-type Data = {
-  site: {
-    siteMetadata: {
-      contactMethods: ContactMethodType[];
-    };
-  };
-};
-
-const query = graphql`
-  query ContactMethods {
-    site {
-      siteMetadata {
-        contactMethods {
-          label
-          url
-          icon
-        }
-      }
-    }
-  }
-`;
-
 export const Contact: React.FC = () => {
-  const { contactMethods } = useStaticQuery<Data>(query).site.siteMetadata;
+  const contactMethods = useContactMethods();
   return (
     <ContactContainer>
       <ContactMethod label="pmuller.eu" url="https://pmuller.eu" icon="web" />

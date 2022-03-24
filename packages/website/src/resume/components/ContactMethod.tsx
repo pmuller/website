@@ -2,7 +2,7 @@ import { mdiAt, mdiGithub, mdiLinkedin, mdiWeb } from "@mdi/js";
 import Icon from "@mdi/react";
 import React from "react";
 
-import { ContactMethod as Props } from "../types";
+import { ContactMethod as Props } from "../../contact";
 import { ContactMethodAnchor } from "./ContactMethodAnchor";
 
 const icons: Record<string, string> = {
