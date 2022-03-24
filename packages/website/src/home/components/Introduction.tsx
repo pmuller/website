@@ -6,9 +6,9 @@ import { IntroductionContainer } from "./IntroductionContainer";
 
 export const Introduction: React.FC = () => (
   <IntroductionContainer>
-    <p>
-      Hi, my name is <strong>Philippe Muller</strong>.
-    </p>
+    <h2>
+      Hi, my name is <strong>Philippe Muller</strong>
+    </h2>
     <p>
       I am a <strong>software engineer</strong> and I am fond of{" "}
       <strong>infrastructure automation</strong>.
