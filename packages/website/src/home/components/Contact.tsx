@@ -7,10 +7,12 @@ export const Contact: React.FC = () => {
   const contactMethods = useContactMethods();
   return (
     <ContactContainer>
-      <ContactLink label="pmuller.eu" url="https://pmuller.eu" icon="web" />
-      {contactMethods.map((method, index) => (
-        <ContactLink {...method} key={index} />
-      ))}
+      <h2>Contact</h2>
+      <div className="items">
+        {contactMethods.map((method, index) => (
+          <ContactLink {...method} key={index} />
+        ))}
+      </div>
     </ContactContainer>
   );
 };
