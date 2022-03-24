@@ -11,4 +11,11 @@ export const HomeContainer = styled.div`
   @media (min-width: 600px) {
     flex-wrap: nowrap;
   }
+
+  & h2 {
+    margin: 0 0 0.83rem 0;
+    @media (min-width: 600px) {
+      margin: 0.83rem 0;
+    }
+  }
 `;
