@@ -1,4 +1,3 @@
-import { NormalizeUriLambdaEdgeFunction } from "./NormalizeUriLambdaEdgeFunction";
 import { cloudfront } from "@pulumi/aws";
 import {
   ComponentResource,
@@ -19,11 +18,6 @@ export class WebsiteDistribution extends ComponentResource {
   public domainName: Output<string>;
   constructor(name: string, args: Inputs, opts?: ComponentResourceOptions) {
     super("website:WebsiteDistribution", name, {}, opts);
-    // XXX: Need to keep this Lambda for a while because Cloudfront replicated it
-    // See: https://github.com/hashicorp/terraform-provider-aws/issues/1721
-    // eslint-disable-next-line no-unused-expressions
-    new NormalizeUriLambdaEdgeFunction(undefined, undefined, { parent: this })
-      .functionArn;
     const distribution = new cloudfront.Distribution(name, {
       origins: [
         {
