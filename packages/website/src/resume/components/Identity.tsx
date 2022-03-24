@@ -5,9 +5,9 @@ import { IdentityContainer } from "./IdentityContainer";
 
 export const Identity: React.FC = () => (
   <IdentityContainer>
-    <h1>
+    <div className="fullName">
       {identity.firstName} {identity.lastName}
-    </h1>
-    <h2>{identity.jobTitle}</h2>
+    </div>
+    <div className="jobTitle">{identity.jobTitle}</div>
   </IdentityContainer>
 );

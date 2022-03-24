@@ -1,39 +1,25 @@
 import React from "react";
 
-import { DelayedEmailAddress } from "./DelayedEmailAddress";
+import { Link } from "../../links";
 import { IntroductionContainer } from "./IntroductionContainer";
 
 export const Introduction: React.FC = () => (
   <IntroductionContainer>
+    <h2>
+      Hi, my name is <strong>Philippe Muller</strong>
+    </h2>
     <p>
-      Hi, my name is <strong>Philippe Muller</strong>.
+      <Link href="/resume/">Over the last 20 years</Link>, I've built numerous
+      infrastructures. First, as a systems engineer, then as a software engineer
+      then as CTO.
     </p>
     <p>
-      I am a <strong>software engineer</strong> and I am fond of{" "}
-      <strong>infrastructure automation</strong>.
+      I love building software systems at scale. I have a particular expertise
+      building serverless applications on AWS with TypeScript and Pulumi.
     </p>
     <p>
-      I am currently building awesome team building games at{" "}
-      <a target="_blank" rel="noopener" href="https://happyteams.events/en">
-        Happy Teams
-      </a>
-      . If you are part of a remote team and enjoy escape rooms, you should
-      check out our latest game:{" "}
-      <a
-        target="_blank"
-        rel="noopener"
-        href="https://www.happyteams.events/en/the-diamond-heist"
-      >
-        The Diamond Heist
-      </a>
-      .
-    </p>
-    <p>
-      Previously, I worked in tech companies and in systematic hedge funds, both
-      as an individual contributor and as CTO.
-    </p>
-    <p>
-      If you'd like to contact me, you can reach me at <DelayedEmailAddress />.
+      Internet people taught me a lot and I am always happy to help. Feel free
+      to contact me if you'd like to discuss your projects.
     </p>
   </IntroductionContainer>
 );

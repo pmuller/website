@@ -12,6 +12,6 @@ on:
 
 jobs:
   build:
-    uses: pmuller/website/.github/workflows/build.yaml@develop
+    uses: ./.github/workflows/build.yaml
     with:
       workDir: ./packages/deployment
