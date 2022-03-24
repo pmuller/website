@@ -8,6 +8,7 @@ const query = graphql`
       siteMetadata {
         title
         titleTemplate
+        description
       }
     }
   }
@@ -16,6 +17,8 @@ const query = graphql`
 export const PageMetadata: React.FC = () => {
   const data = useStaticQuery(query).site.siteMetadata;
   return (
-    <Helmet title={data.title} titleTemplate={data.titleTemplate}></Helmet>
+    <Helmet title={data.title} titleTemplate={data.titleTemplate}>
+      <meta name="description" content={data.description} />
+    </Helmet>
   );
 };
