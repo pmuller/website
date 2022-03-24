@@ -1,6 +1,7 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 
-import { BasePage } from "../../core";
+import { BasePage, PageMetadata } from "../../core";
 import { Education } from "./Education";
 import { Experience } from "./Experience";
 import { Header } from "./Header";
@@ -10,6 +11,8 @@ import { Summary } from "./Summary";
 
 export const Resume: React.FC = () => (
   <BasePage>
+    <PageMetadata />
+    <Helmet title="Philippe Muller Software Engineer resume" />
     <Layout>
       <Header />
       <Experience />

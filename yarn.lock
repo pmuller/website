@@ -5358,6 +5358,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/react-helmet@npm:^6.1.5":
+  version: 6.1.5
+  resolution: "@types/react-helmet@npm:6.1.5"
+  dependencies:
+    "@types/react": "*"
+  checksum: d059cc084d3b3071cce3421bb1170dd42819cf39b81afe60d4fbd66c5ef9ffeaadf1802df80efd9553258f621678f69ceb5a21d73df0d8539d40ae9a0f995485
+  languageName: node
+  linkType: hard
+
 "@types/react@npm:*, @types/react@npm:^17.0.39":
   version: 17.0.39
   resolution: "@types/react@npm:17.0.39"
@@ -10648,6 +10657,18 @@ __metadata:
   peerDependencies:
     gatsby: ^4.0.0-next
   checksum: fe871add93ba9a5b82bee2d861db9434eafcf0bb6bf6ac093548847c345077decd7b0e5caa5c2aa9145bbb9916a1957c5763802d3497229e4a38525935575c52
+  languageName: node
+  linkType: hard
+
+"gatsby-plugin-react-helmet@npm:^5.10.0":
+  version: 5.10.0
+  resolution: "gatsby-plugin-react-helmet@npm:5.10.0"
+  dependencies:
+    "@babel/runtime": ^7.15.4
+  peerDependencies:
+    gatsby: ^4.0.0-next
+    react-helmet: ^5.1.3 || ^6.0.0
+  checksum: bbf9e1fb00ab5cec6c5f2a81e3a599e3434aa8a4c8f8c75197d16bdd434e2f2e6b30e2cfd7fac39bcd142606d0c42bbaffa1a18c11f759d4a649679d22422899
   languageName: node
   linkType: hard
 
@@ -16786,6 +16807,27 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-fast-compare@npm:^3.1.1":
+  version: 3.2.0
+  resolution: "react-fast-compare@npm:3.2.0"
+  checksum: 8ef272c825ae329f61633ce4ce7f15aa5b84e5214d88bc0823880236e03e985a13195befa2c7a4eda7db3b017dc7985729152d88445823f652403cf36c2b86aa
+  languageName: node
+  linkType: hard
+
+"react-helmet@npm:^6.1.0":
+  version: 6.1.0
+  resolution: "react-helmet@npm:6.1.0"
+  dependencies:
+    object-assign: ^4.1.1
+    prop-types: ^15.7.2
+    react-fast-compare: ^3.1.1
+    react-side-effect: ^2.1.0
+  peerDependencies:
+    react: ">=16.3.0"
+  checksum: a4998479dab7fc1c2799eddefb1870a9d881b5f71cfdf97979a9882e42f4bb50402d55335f308f461e735e01a06f46b16cc7b4e6bcb22c7a4a6f85a753c5c106
+  languageName: node
+  linkType: hard
+
 "react-is@npm:^16.13.1, react-is@npm:^16.8.3":
   version: 16.13.1
   resolution: "react-is@npm:16.13.1"
@@ -16811,6 +16853,15 @@ __metadata:
   version: 0.9.0
   resolution: "react-refresh@npm:0.9.0"
   checksum: 6440146176f19402ffb7d66f317e40b1c42c88579b4d439b49021e38be6307c642da3e8732a72e6997b6bb1127db0da92f4aa433da4313ce8ebad0c1efa2ed4a
+  languageName: node
+  linkType: hard
+
+"react-side-effect@npm:^2.1.0":
+  version: 2.1.1
+  resolution: "react-side-effect@npm:2.1.1"
+  peerDependencies:
+    react: ^16.3.0 || ^17.0.0
+  checksum: 324511ea8f6669555e166b4af280cdf46034bf0e33c486711e3ce17f88f6f21fed17055098408be1347657d0cbcd614bca944cf9f8e4ecfa96a21d13893fe9fc
   languageName: node
   linkType: hard
 
@@ -20012,6 +20063,7 @@ __metadata:
     "@trivago/prettier-plugin-sort-imports": ^3.2.0
     "@types/react": ^17.0.39
     "@types/react-dom": ^17.0.11
+    "@types/react-helmet": ^6.1.5
     "@typescript-eslint/eslint-plugin": ^5.12.1
     "@typescript-eslint/parser": ^5.12.1
     eslint: ^8.9.0
@@ -20021,6 +20073,7 @@ __metadata:
     gatsby: ^4.9.3
     gatsby-plugin-image: ^2.8.1
     gatsby-plugin-linaria: ^3.2.0
+    gatsby-plugin-react-helmet: ^5.10.0
     gatsby-plugin-sharp: ^4.8.1
     gatsby-plugin-svgr-svgo: ^2.0.0
     gatsby-source-filesystem: ^4.8.1
@@ -20030,6 +20083,7 @@ __metadata:
     prettier-config: "workspace:^"
     react: ^17.0.2
     react-dom: ^17.0.2
+    react-helmet: ^6.1.0
     stylelint: ^13.13.1
     stylelint-config-recommended: ^5.0.0
     typescript: ^4.5.5
