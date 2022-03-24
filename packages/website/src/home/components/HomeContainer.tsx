@@ -8,7 +8,7 @@ export const HomeContainer = styled.div`
   flex-wrap: wrap;
   gap: 1rem;
 
-  @media (min-width: 600px) {
+  @media (min-width: 768px) {
     flex-wrap: nowrap;
   }
 

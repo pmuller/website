@@ -3,7 +3,7 @@ import { styled } from "linaria/react";
 export const ContactContainer = styled.div`
   font-family: monospace;
   & > h2 {
-    @media (min-width: 600px) {
+    @media (min-width: 768px) {
       text-align: right;
     }
   }
@@ -13,7 +13,7 @@ export const ContactContainer = styled.div`
     gap: 0.75rem;
     & > a {
       align-items: center;
-      @media (min-width: 600px) {
+      @media (min-width: 768px) {
         flex-direction: row-reverse;
       }
     }
