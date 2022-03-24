@@ -11,5 +11,9 @@ export const ContactContainer = styled.div`
   /* iPhone SE landscape and bigger */
   @media (min-width: 568px) {
     flex-direction: column;
+
+    & > a {
+      flex-direction: row-reverse;
+    }
   }
 `;

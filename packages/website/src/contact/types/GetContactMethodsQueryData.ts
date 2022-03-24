@@ -1,9 +1,9 @@
-import { ContactMethod } from "./ContactMethod";
+import { ContactMethodProps } from "./ContactMethodProps";
 
 export type GetContactMethodsQueryData = {
   site: {
     siteMetadata: {
-      contactMethods: ContactMethod[];
+      contactMethods: ContactMethodProps[];
     };
   };
 };

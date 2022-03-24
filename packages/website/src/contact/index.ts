@@ -1,2 +1,3 @@
+export { ContactLink } from "./components";
 export { useContactMethods } from "./hooks";
-export type { ContactMethod } from "./types";
+export type { ContactMethodProps } from "./types";
