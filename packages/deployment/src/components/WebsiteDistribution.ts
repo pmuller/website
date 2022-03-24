@@ -1,4 +1,3 @@
-import { NormalizeUriLambdaEdgeFunction } from "./NormalizeUriLambdaEdgeFunction";
 import { cloudfront } from "@pulumi/aws";
 import {
   ComponentResource,
@@ -6,6 +5,7 @@ import {
   Input,
   Output,
 } from "@pulumi/pulumi";
+import { readFileSync } from "fs";
 
 type Inputs = {
   contentBucketId: Input<string>;
@@ -52,13 +52,18 @@ export class WebsiteDistribution extends ComponentResource {
         minTtl: 0,
         defaultTtl: 10 * 60, // 10m
         maxTtl: 60 * 60 * 24 * 90, // 90d
-        lambdaFunctionAssociations: [
+        functionAssociations: [
           {
-            lambdaArn: new NormalizeUriLambdaEdgeFunction(
-              undefined,
-              undefined,
+            functionArn: new cloudfront.Function(
+              "normalize-uri",
+              {
+                runtime: "cloudfront-js-1.0",
+                code: readFileSync(
+                  "../../cloudfront-normalize-uri/dist/index.js"
+                ).toString(),
+              },
               { parent: this }
-            ).functionArn,
+            ).arn,
             eventType: "viewer-request",
           },
         ],
