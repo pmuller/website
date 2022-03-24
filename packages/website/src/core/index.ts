@@ -1,1 +1,1 @@
-export { BasePage, Layout } from "./components";
+export { BasePage, Layout, PageMetadata } from "./components";
