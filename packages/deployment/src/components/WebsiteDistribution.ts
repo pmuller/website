@@ -6,6 +6,7 @@ import {
   Input,
   Output,
 } from "@pulumi/pulumi";
+import { readFileSync } from "fs";
 
 type Inputs = {
   contentBucketId: Input<string>;
@@ -18,6 +19,11 @@ export class WebsiteDistribution extends ComponentResource {
   public domainName: Output<string>;
   constructor(name: string, args: Inputs, opts?: ComponentResourceOptions) {
     super("website:WebsiteDistribution", name, {}, opts);
+    // XXX: Need to keep this Lambda for a while because Cloudfront replicated it
+    // See: https://github.com/hashicorp/terraform-provider-aws/issues/1721
+    // eslint-disable-next-line no-unused-expressions
+    new NormalizeUriLambdaEdgeFunction(undefined, undefined, { parent: this })
+      .functionArn;
     const distribution = new cloudfront.Distribution(name, {
       origins: [
         {
@@ -52,13 +58,18 @@ export class WebsiteDistribution extends ComponentResource {
         minTtl: 0,
         defaultTtl: 10 * 60, // 10m
         maxTtl: 60 * 60 * 24 * 90, // 90d
-        lambdaFunctionAssociations: [
+        functionAssociations: [
           {
-            lambdaArn: new NormalizeUriLambdaEdgeFunction(
-              undefined,
-              undefined,
+            functionArn: new cloudfront.Function(
+              "normalize-uri",
+              {
+                runtime: "cloudfront-js-1.0",
+                code: readFileSync(
+                  "../../cloudfront-normalize-uri/dist/index.js"
+                ).toString(),
+              },
               { parent: this }
-            ).functionArn,
+            ).arn,
             eventType: "viewer-request",
           },
         ],

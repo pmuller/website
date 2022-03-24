@@ -1,17 +1,11 @@
-// eslint-disable-next-line import/no-unresolved
-import { Handler } from "aws-lambda";
+// XXX: This is incomplete (just enough to implement our features)
+type CloudfrontFunctionEvent = {
+  request: {
+    uri: string;
+  };
+};
 
-import { LambdaEdgeEvent } from "./types";
-
-export const handler: Handler<LambdaEdgeEvent> = (
-  event,
-  _context,
-  callback
-) => {
-  const [record] = event.Records;
-  if (!record)
-    throw new Error(`No record found in event: ${JSON.stringify(event)}`);
-  const { request } = record.cf;
+export const handler = ({ request }: CloudfrontFunctionEvent) => {
   request.uri = request.uri.replace(/\/$/, "/index.html");
-  return callback(null, request);
+  return request;
 };
