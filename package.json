@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "repository": "https://github.com/pmuller/website",
   "author": "Philippe Muller",
-  "license": "MIT",
+  "license": "UNLICENSED",
   "packageManager": "yarn@3.2.0",
   "workspaces": [
     "packages/*"
