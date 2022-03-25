@@ -1,4 +1,4 @@
-import { acm, cloudfront, route53 } from "@pulumi/aws";
+import { acm, cloudfront, types } from "@pulumi/aws";
 import {
   ComponentResource,
   ComponentResourceOptions,
@@ -14,11 +14,14 @@ type Inputs = {
   contentBucketRegionalDomainName: Input<string>;
   originAccessIdentityCloudfrontPath: Input<string>;
   logsBucketDomainName: Input<string>;
-  zoneId?: Input<string>;
 };
 
 export class WebsiteDistribution extends ComponentResource {
   public domainName: Output<string>;
+  public certificateDomainValidationOptions: Output<
+    types.output.acm.CertificateDomainValidationOption[]
+  >;
+  public hostedZoneId: Output<string>;
 
   constructor(name: string, args: Inputs, opts?: ComponentResourceOptions) {
     super("website:WebsiteDistribution", name, {}, opts);
@@ -35,23 +38,8 @@ export class WebsiteDistribution extends ComponentResource {
       },
       { parent: this }
     );
-    if (args.zoneId)
-      certificate.domainValidationOptions.apply((options) =>
-        options.map(
-          (option) =>
-            new route53.Record(
-              `acm-validation-${option.domainName}`,
-              {
-                zoneId: args.zoneId as Input<string>,
-                name: option.resourceRecordName,
-                type: option.resourceRecordType,
-                records: [option.resourceRecordValue],
-                ttl: 300,
-              },
-              { parent: this }
-            )
-        )
-      );
+    this.certificateDomainValidationOptions =
+      certificate.domainValidationOptions;
     const distribution = certificate.status.apply((status) => {
       const certificateConfig =
         status === "SUCCESS"
@@ -146,5 +134,6 @@ export class WebsiteDistribution extends ComponentResource {
       );
     });
     this.domainName = distribution.domainName;
+    this.hostedZoneId = distribution.hostedZoneId;
   }
 }
