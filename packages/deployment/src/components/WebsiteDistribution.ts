@@ -1,4 +1,4 @@
-import { acm, cloudfront, types } from "@pulumi/aws";
+import { acm, cloudfront, Provider, types } from "@pulumi/aws";
 import {
   ComponentResource,
   ComponentResourceOptions,
@@ -36,8 +36,12 @@ export class WebsiteDistribution extends ComponentResource {
         subjectAlternativeNames,
         validationMethod: "DNS",
       },
-      { parent: this }
+      {
+        parent: this,
+        provider: new Provider("us-east-1", { region: "us-east-1" }),
+      }
     );
+
     this.certificateDomainValidationOptions =
       certificate.domainValidationOptions;
     const distribution = certificate.status.apply((status) => {
