@@ -1,5 +1,7 @@
 # cloudfront-normalize-uri
 
+[![Build](https://github.com/pmuller/website/actions/workflows/build-cloudfront-normalize-uri.yaml/badge.svg?branch=develop)](https://github.com/pmuller/website/actions/workflows/build-cloudfront-normalize-uri.yaml)
+
 A Cloudfront function that normalizes Cloudfront requests.
 
 When URI ends with a trailing slash, `index.html` is appended.
