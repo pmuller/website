@@ -42,7 +42,7 @@ export class WebsiteDistribution extends ComponentResource {
       certificate.domainValidationOptions;
     const distribution = certificate.status.apply((status) => {
       const certificateConfig =
-        status === "SUCCESS"
+        status === "ISSUED"
           ? {
               aliases,
               viewerCertificate: {
@@ -55,7 +55,7 @@ export class WebsiteDistribution extends ComponentResource {
                 cloudfrontDefaultCertificate: true,
               },
             };
-      if (status !== "SUCCESS")
+      if (status !== "ISSUED")
         log.warn(
           `Cannot use certificate with Cloudfront because it is not ready: ${status}`
         );
