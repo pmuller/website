@@ -12,7 +12,9 @@ export const ExperienceSubStage: React.FC<Props> = (props) => (
     </div>
     <div className="body">
       <div className="description">{props.description}</div>
-      <div className="stack">Stack: {props.techStack?.join(", ")}</div>
+      {props.techStack && (
+        <div className="stack">Stack: {props.techStack.join(", ")}</div>
+      )}
     </div>
   </ExperienceSubStageContainer>
 );
