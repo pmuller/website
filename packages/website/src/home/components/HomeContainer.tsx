@@ -10,6 +10,7 @@ export const HomeContainer = styled.div`
 
   @media (min-width: 768px) {
     flex-wrap: nowrap;
+    margin: 0 1rem 1rem 1rem;
   }
 
   & h2 {

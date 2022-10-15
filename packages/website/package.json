@@ -47,6 +47,7 @@
     "stylelint-config-recommended": "^5.0.0",
     "typescript": "^4.5.5"
   },
+  "license": "UNLICENSED",
   "prettier": "prettier-config",
   "sideEffects": false
 }

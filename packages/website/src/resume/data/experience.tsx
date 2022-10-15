@@ -7,6 +7,19 @@ import { ExperienceStage } from "../types";
 export const experience: ExperienceStage[] = [
   {
     company: {
+      name: "㊙",
+      location: "██ ███ ███",
+    },
+    stages: [
+      {
+        startDate: new Date("2022-10-24"),
+        title: "Principal Software Engineer",
+        description: "Building ████ ██████████ ███ ██████ ████████ ███████.",
+      },
+    ],
+  },
+  {
+    company: {
       name: "Happy Teams",
       location: "Metz, France",
       url: "https://happyteams.events/en",
@@ -15,6 +28,7 @@ export const experience: ExperienceStage[] = [
     stages: [
       {
         startDate: new Date("2021-01-04"),
+        endDate: new Date("2022-04-15"),
         title: "Chief Technology Officer, co-founder",
         description: (
           <ul>

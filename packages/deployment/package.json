@@ -1,5 +1,6 @@
 {
   "name": "website-deployment",
+  "license": "UNLICENSED",
   "scripts": {
     "format": "prettier --write .",
     "build": "tsc",

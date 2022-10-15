@@ -1,13 +1,13 @@
 import React from "react";
 
+import { Avatar } from "../../avatar";
 import { Contact } from "./Contact";
 import { HeaderContainer } from "./HeaderContainer";
 import { Identity } from "./Identity";
-import { Photo } from "./Photo";
 
 export const Header: React.FC = () => (
   <HeaderContainer>
-    <Photo />
+    <Avatar />
     <Identity />
     <Contact />
   </HeaderContainer>
