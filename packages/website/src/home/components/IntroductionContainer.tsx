@@ -2,6 +2,7 @@ import { styled } from "linaria/react";
 
 export const IntroductionContainer = styled.div`
   color: #222;
+  flex-grow: 1;
 
   & strong {
     color: #000;
