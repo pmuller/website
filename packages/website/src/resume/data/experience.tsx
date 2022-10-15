@@ -15,6 +15,7 @@ export const experience: ExperienceStage[] = [
     stages: [
       {
         startDate: new Date("2021-01-04"),
+        endDate: new Date("2022-04-15"),
         title: "Chief Technology Officer, co-founder",
         description: (
           <ul>
