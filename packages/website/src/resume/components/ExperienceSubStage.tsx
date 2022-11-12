@@ -10,11 +10,15 @@ export const ExperienceSubStage: React.FC<Props> = (props) => (
       <div className="title">{props.title}</div>
       <Dates start={props.startDate} end={props.endDate} />
     </div>
-    <div className="body">
-      <div className="description">{props.description}</div>
-      {props.techStack && (
-        <div className="stack">Stack: {props.techStack.join(", ")}</div>
-      )}
-    </div>
+    {(props.description || props.techStack) && (
+      <div className="body">
+        {props.description && (
+          <div className="description">{props.description}</div>
+        )}
+        {props.techStack && (
+          <div className="stack">Stack: {props.techStack.join(", ")}</div>
+        )}
+      </div>
+    )}
   </ExperienceSubStageContainer>
 );

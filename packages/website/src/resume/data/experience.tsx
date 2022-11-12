@@ -7,14 +7,14 @@ import { ExperienceStage } from "../types";
 export const experience: ExperienceStage[] = [
   {
     company: {
-      name: "㊙",
-      location: "██ ███ ███",
+      name: "Tower Research Capital",
+      url: "https://www.tower-research.com/",
+      description: "High-frequency trading",
     },
     stages: [
       {
         startDate: new Date("2022-10-24"),
         title: "Principal Software Engineer",
-        description: "Building ████ ██████████ ███ ██████ ████████ ███████.",
       },
     ],
   },
