@@ -10,6 +10,7 @@ export const experience: ExperienceStage[] = [
       name: "Tower Research Capital",
       url: "https://www.tower-research.com/",
       description: "High-frequency trading",
+      location: "Singapore",
     },
     stages: [
       {
