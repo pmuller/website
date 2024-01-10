@@ -278,7 +278,7 @@ export const experience: ExperienceStage[] = [
   },
   {
     company: {
-      name: "Kewego",
+      name: "Kewego (defunct)",
       location: "Paris, France",
       url: "https://en.wikipedia.org/wiki/Kewego",
       description: "Video platform provider",
