@@ -10,19 +10,29 @@ export const experience: ExperienceStage[] = [
       name: "Tower Research Capital",
       url: "https://www.tower-research.com/",
       description: "High-frequency trading",
+      location: "Singapore",
     },
     stages: [
       {
+        startDate: new Date("2023-05-02"),
+        endDate: new Date("2024-01-05"),
+        title: "Director of Technology (APAC)",
+        description:
+          "Management of the APAC region engineering team (50 people)",
+      },
+      {
         startDate: new Date("2022-10-24"),
+        endDate: new Date("2023-05-01"),
         title: "Principal Software Engineer",
+        description: "HPC infrastructure automation on GCP",
+        techStack: ["Linux", "Python", "SaltStack", "Pulumi", "Google Cloud"],
       },
     ],
   },
   {
     company: {
-      name: "Happy Teams",
+      name: "Happy Teams (defunct)",
       location: "Metz, France",
-      url: "https://happyteams.events/en",
       description: "Remote team building games",
     },
     stages: [
@@ -36,13 +46,7 @@ export const experience: ExperienceStage[] = [
               Hiring and management of the software engineering team (3
               developers)
             </li>
-            <li>
-              Design of{" "}
-              <ExternalLink href="https://happyteams.events/en/the-diamond-heist">
-                The Diamond Heist
-              </ExternalLink>{" "}
-              real-time multi-player game
-            </li>
+            <li>Design of The Diamond Heist real-time multi-player game</li>
           </ul>
         ),
         techStack: [
@@ -98,7 +102,7 @@ export const experience: ExperienceStage[] = [
     company: {
       name: "The Box Escape Games",
       location: "Metz, France",
-      url: "https://the-box.fr/en/",
+      url: "https://www.the-box-metz.com/",
       description: "Award-winning escape rooms",
     },
     stages: [
@@ -203,7 +207,7 @@ export const experience: ExperienceStage[] = [
   },
   {
     company: {
-      name: "Tapinoma",
+      name: "Tapinoma (defunct)",
       location: "Remote",
       description: "Mobile apps startup",
     },
@@ -240,7 +244,7 @@ export const experience: ExperienceStage[] = [
   },
   {
     company: {
-      name: "Altran",
+      name: "Altran (now Capgemini Engineering)",
       location: "Paris, France",
       url: "https://altran.fr",
       description: "Engineering consulting firm",
@@ -275,7 +279,7 @@ export const experience: ExperienceStage[] = [
   },
   {
     company: {
-      name: "Kewego",
+      name: "Kewego (defunct)",
       location: "Paris, France",
       url: "https://en.wikipedia.org/wiki/Kewego",
       description: "Video platform provider",
