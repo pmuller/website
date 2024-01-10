@@ -30,7 +30,7 @@ export const experience: ExperienceStage[] = [
   },
   {
     company: {
-      name: "Happy Teams",
+      name: "Happy Teams (defunct)",
       location: "Metz, France",
       url: "https://happyteams.events/en",
       description: "Remote team building games",
