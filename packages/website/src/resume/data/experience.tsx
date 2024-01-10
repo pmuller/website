@@ -32,7 +32,6 @@ export const experience: ExperienceStage[] = [
     company: {
       name: "Happy Teams (defunct)",
       location: "Metz, France",
-      url: "https://happyteams.events/en",
       description: "Remote team building games",
     },
     stages: [
@@ -46,13 +45,7 @@ export const experience: ExperienceStage[] = [
               Hiring and management of the software engineering team (3
               developers)
             </li>
-            <li>
-              Design of{" "}
-              <ExternalLink href="https://happyteams.events/en/the-diamond-heist">
-                The Diamond Heist
-              </ExternalLink>{" "}
-              real-time multi-player game
-            </li>
+            <li>Design of The Diamond Heist real-time multi-player game</li>
           </ul>
         ),
         techStack: [
