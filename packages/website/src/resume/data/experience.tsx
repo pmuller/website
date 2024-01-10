@@ -243,7 +243,7 @@ export const experience: ExperienceStage[] = [
   },
   {
     company: {
-      name: "Altran",
+      name: "Altran (now Capgemini Engineering)",
       location: "Paris, France",
       url: "https://altran.fr",
       description: "Engineering consulting firm",
