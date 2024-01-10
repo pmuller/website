@@ -13,8 +13,18 @@ export const experience: ExperienceStage[] = [
     },
     stages: [
       {
+        startDate: new Date("2023-05-02"),
+        endDate: new Date("2024-01-05"),
+        title: "Director of Technology (APAC)",
+        description:
+          "Management of the APAC region engineering team (50 people)",
+      },
+      {
         startDate: new Date("2022-10-24"),
+        endDate: new Date("2023-05-01"),
         title: "Principal Software Engineer",
+        description: "HPC infrastructure automation on GCP",
+        techStack: ["Linux", "Python", "SaltStack", "Pulumi", "Google Cloud"],
       },
     ],
   },
