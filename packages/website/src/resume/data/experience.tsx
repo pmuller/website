@@ -108,7 +108,7 @@ export const experience: ExperienceStage[] = [
     company: {
       name: "The Box Escape Games",
       location: "Metz, France",
-      url: "https://the-box.fr/en/",
+      url: "https://www.the-box-metz.com/",
       description: "Award-winning escape rooms",
     },
     stages: [
