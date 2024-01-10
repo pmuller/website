@@ -206,7 +206,7 @@ export const experience: ExperienceStage[] = [
   },
   {
     company: {
-      name: "Tapinoma",
+      name: "Tapinoma (defunct)",
       location: "Remote",
       description: "Mobile apps startup",
     },
