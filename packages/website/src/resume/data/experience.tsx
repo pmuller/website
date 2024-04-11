@@ -62,7 +62,7 @@ export const experience: ExperienceStage[] = [
   },
   {
     company: {
-      name: "AXA Investment Managers Chorus",
+      name: "AXA Investment Managers Chorus (defunct)",
       location: "Hong Kong",
       url: "https://www.axa-im.com/what-we-do/alternatives#anchor-f45d1552-2096-429e-8bed-3365c32a3dd7",
       description:
