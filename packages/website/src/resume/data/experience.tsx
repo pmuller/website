@@ -18,13 +18,14 @@ export const experience: ExperienceStage[] = [
         endDate: new Date("2024-01-05"),
         title: "Director of Technology (APAC)",
         description:
-          "Management of the APAC region engineering team (50 people)",
+          "Management of the Core engineering team in Singapore, Hong Kong and Shanghai (50 people)",
       },
       {
         startDate: new Date("2022-10-24"),
         endDate: new Date("2023-05-01"),
         title: "Principal Software Engineer",
-        description: "HPC infrastructure automation on GCP",
+        description:
+          "Design and implementation of HPC infrastructure automation on GCP, from the cloud layer to systems and application, with extensive testing and full CICD",
         techStack: ["Linux", "Python", "SaltStack", "Pulumi", "Google Cloud"],
       },
     ],
@@ -61,7 +62,7 @@ export const experience: ExperienceStage[] = [
   },
   {
     company: {
-      name: "AXA Investment Managers Chorus",
+      name: "AXA Investment Managers Chorus (defunct)",
       location: "Hong Kong",
       url: "https://www.axa-im.com/what-we-do/alternatives#anchor-f45d1552-2096-429e-8bed-3365c32a3dd7",
       description:
@@ -100,7 +101,7 @@ export const experience: ExperienceStage[] = [
   },
   {
     company: {
-      name: "The Box Escape Games",
+      name: "The Box Escape Games (sold)",
       location: "Metz, France",
       url: "https://www.the-box-metz.com/",
       description: "Award-winning escape rooms",
