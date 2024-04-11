@@ -18,7 +18,7 @@ export const experience: ExperienceStage[] = [
         endDate: new Date("2024-01-05"),
         title: "Director of Technology (APAC)",
         description:
-          "Management of the APAC region engineering team (50 people)",
+          "Management of the Core engineering team in Singapore, Hong Kong and Shanghai (50 people)",
       },
       {
         startDate: new Date("2022-10-24"),
