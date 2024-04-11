@@ -24,7 +24,8 @@ export const experience: ExperienceStage[] = [
         startDate: new Date("2022-10-24"),
         endDate: new Date("2023-05-01"),
         title: "Principal Software Engineer",
-        description: "HPC infrastructure automation on GCP",
+        description:
+          "Design and implementation of HPC infrastructure automation on GCP, from the cloud layer to systems and application, with extensive testing and full CICD",
         techStack: ["Linux", "Python", "SaltStack", "Pulumi", "Google Cloud"],
       },
     ],
