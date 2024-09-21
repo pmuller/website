@@ -14,6 +14,11 @@ export const experience: ExperienceStage[] = [
     },
     stages: [
       {
+        startDate: new Date("2024-01-05"),
+        endDate: new Date("2024-07-31"),
+        title: "Gardening leave",
+      },
+      {
         startDate: new Date("2023-05-02"),
         endDate: new Date("2024-01-05"),
         title: "Director of Technology (APAC)",
